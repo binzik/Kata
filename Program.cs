@@ -1,4 +1,5 @@
 ﻿using Kata.kyu.kyu6;
+using Kata.kyu.kyu7;
 using System;
 
 namespace Kata
@@ -9,7 +10,14 @@ namespace Kata
         {
             //Console.WriteLine(PrinterError("kkkwwwaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));
             //Console.ReadKey();
-            Console.WriteLine(TitleCase.GetCase("aBC deF Ghi", null));
+            //Console.WriteLine(TitleCase.GetCase("aBC deF Ghi", null));
+
+            Node node = null;
+            node = Node.Push(node, 3);
+            node = Node.Push(node, 2);
+            node = Node.Push(node, 1);
+
+            Console.WriteLine(node);
             Console.ReadKey();
         }
 

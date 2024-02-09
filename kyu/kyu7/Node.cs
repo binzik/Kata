@@ -8,7 +8,7 @@ namespace Kata.kyu.kyu7
 {
     //From course https://www.codewars.com/kata/55be95786abade3c71000079/train/csharp
     // Status: TODO
-    // 
+    // Input: 
     //
     public class Node
     {
@@ -21,9 +21,13 @@ namespace Kata.kyu.kyu7
             this.Next = null;
         }
 
+        // Input:   Node, int 
+        // Output:  Node
         public static Node Push(Node head, int data)
         {
-            throw new NotImplementedException();
+            head.Next = head;
+            head.Data = data;
+            return head;
         }
 
         public static Node BuildOneTwoThree()
