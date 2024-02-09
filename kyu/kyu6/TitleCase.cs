@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Kata.kyu.kyu6
 {
+    //From course https://www.codewars.com/kata/5202ef17a402dd033c000009/train/csharp
     public static class TitleCase
     {
+        // return Sentece with filtered upperletters
+        // Input: ("ab cd ef","cd")
+        // Output: "Ab Cd ef"
         public static string GetCase(string title, string minorWords = "")
         {
             if (title.Length > 1)
