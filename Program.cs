@@ -23,10 +23,10 @@ namespace Kata
                 Console.WriteLine("3. Kyu 6");
 
                 Console.WriteLine("0. Exit");
-                Console.WriteLine("Chose Lvl: ");
-
-
-                switch (Int32.Parse(Console.ReadLine()))
+                Console.WriteLine("Chose: ");
+                int chose = Int32.Parse(Console.ReadLine());
+                Console.Clear();
+                switch (chose)
                 {
                     case 0:
                         exit = false;
@@ -39,6 +39,7 @@ namespace Kata
                         break;
                     case 3:
                         Console.WriteLine("Chosen kyu 6");
+                        ShowMenuKyu6();
                         break;
                     default:
                         Console.WriteLine("Chosen incorrectly");
@@ -51,17 +52,49 @@ namespace Kata
         {
             while (true)
             {
-                Console.WriteLine("*** Menu ***");
+                Console.WriteLine("*** Kyu 8 ***");
                 Console.WriteLine("1. Kyu 8");
+
+                Int32.Parse(Console.ReadLine());
             }
         }
 
-        static void TestExamples()
+        static void ShowMenuKyu7()
         {
-            void BouncingBallTest()
+            while (true)
             {
-                BouncingBall.bouncingBall(3.0, 0.66, 1.5);
+                Console.WriteLine("*** Kyu 7 ***");
+                Console.WriteLine("1. Kyu 8");
+
+                Int32.Parse(Console.ReadLine());
             }
+        }
+
+        static void ShowMenuKyu6()
+        {
+            bool isExit = false;
+            while (!isExit)
+            {
+                Console.WriteLine("*** Kyu 6 ***");
+                Console.WriteLine("1. BouncingBall");
+
+                switch (Int32.Parse(Console.ReadLine()))
+                {
+                    case 0:
+                        isExit = true;
+                        break;
+                    case 1:
+                        BouncingBallTest();
+                        break;
+                }
+            }
+        }
+
+        static void BouncingBallTest()
+        {
+
+
+            Console.WriteLine(0 == BouncingBall.bouncingBall(3.0, 0.66, 1.5));
         }
     }
 }
