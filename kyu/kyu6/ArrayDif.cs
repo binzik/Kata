@@ -11,8 +11,6 @@ namespace Kata.kyu.kyu6
         // Output: int[] {1, 3}
         public static int[] ArrayDiff(int[] a, int[] b)
         {
-            // Your brilliant solution goes here
-            // It's possible to pass random tests in about a second ;)
             int i = 0;
             var list = a.ToList();
 
