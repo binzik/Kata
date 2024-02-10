@@ -12,12 +12,14 @@ namespace Kata
             //Console.ReadKey();
             //Console.WriteLine(TitleCase.GetCase("aBC deF Ghi", null));
 
-            Node node = null;
-            node = Node.Push(node, 3);
-            node = Node.Push(node, 2);
-            node = Node.Push(node, 1);
+            //Node node = null;
+            //node = Node.Push(node, 3);
+            //node = Node.Push(node, 2);
+            //node = Node.Push(node, 1);
 
-            Console.WriteLine(node);
+            //Console.WriteLine(node);
+
+            ArrayDif.ArrayDiff(new int[] {1, 2, 2, 2, 3}, new int[] {2});
             Console.ReadKey();
         }
 
