@@ -92,9 +92,10 @@ namespace Kata
 
         static void BouncingBallTest()
         {
-
-
-            Console.WriteLine(0 == BouncingBall.bouncingBall(3.0, 0.66, 1.5));
+            Console.WriteLine(BouncingBall.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Seen: "+BouncingBall.bouncingBall(3.0, 0.66, 1.5));
+            Console.WriteLine("---------------");
         }
     }
 }
