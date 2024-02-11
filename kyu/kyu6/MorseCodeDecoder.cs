@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Kata.kyu.kyu6
 {
+    //From course https://www.codewars.com/kata/54b724efac3d5402db00065e/train/csharp
+    //Status: TODO
     public class MorseCodeDecoder
     {
+        //Input: .... . -.--   .--- ..- -.. .
+        //Output: "HEY JUDE"
         public static string Decode(string morseCode)
         {
             Dictionary<string, string> MorseDecode = new Dictionary<string, string>();
@@ -49,6 +53,39 @@ namespace Kata.kyu.kyu6
             MorseDecode.Add("----.", "9");
             MorseDecode.Add("-----", "0");
 
+            MorseDecode.Add(" ", " ");
+
+            //Ended here 
+            List<string> MorseCodedSigns = new List<string>(morseCode.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
+
+
+            Console.WriteLine();
+            //string sign = string.Empty;
+            //int space = 0;
+
+            //foreach(char s in morseCode)
+            //{
+            //    if(s.ToString()==" ")
+            //    {
+            //        space++;
+            //    }
+            //    if(s.ToString() != " " && space == 1)
+            //    {
+            //        MorseCodedSigns.Add(sign);
+            //        sign = string.Empty;
+            //        space = 0;
+            //    }
+            //    if (s.ToString() != " " && space < 3)
+            //    {
+            //        space = 0;
+            //        sign += s.ToString();
+            //    }
+            //    if (space == 3)
+            //    {
+            //        MorseCodedSigns.Add(" ");
+            //        space = 0;
+            //    }
+            //}
 
 
             throw new System.NotImplementedException("Please provide some code.");

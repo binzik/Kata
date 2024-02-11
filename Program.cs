@@ -77,6 +77,7 @@ namespace Kata
             {
                 Console.WriteLine("*** Kyu 6 ***");
                 Console.WriteLine("1. BouncingBall");
+                Console.WriteLine("2. MorseCodeDecoder");
 
                 switch (Int32.Parse(Console.ReadLine()))
                 {
@@ -85,6 +86,9 @@ namespace Kata
                         break;
                     case 1:
                         BouncingBallTest();
+                        break;
+                    case 2:
+                        MorseCodeDecoderTest();
                         break;
                 }
             }
@@ -97,5 +101,14 @@ namespace Kata
             Console.WriteLine("Seen: "+BouncingBall.bouncingBall(3.0, 0.66, 1.5));
             Console.WriteLine("---------------");
         }
+
+        static void MorseCodeDecoderTest()
+        {
+            Console.WriteLine();
+            Console.WriteLine("---------------");
+            Console.WriteLine("Seen: " + MorseCodeDecoder.Decode(".... . -.--   .--- ..- -.. ."));
+            Console.WriteLine("---------------");
+        }
+
     }
 }
