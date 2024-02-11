@@ -8,6 +8,51 @@ namespace Kata.kyu.kyu6
 {
     public class MorseCodeDecoder
     {
+        public static string Decode(string morseCode)
+        {
+            Dictionary<string, string> MorseDecode = new Dictionary<string, string>();
+            MorseDecode.Add(".-", "A");
+            MorseDecode.Add("-...", "B");
+            MorseDecode.Add("-.-.", "C");
+            MorseDecode.Add("-..", "D");
+            MorseDecode.Add(".", "E");
+            MorseDecode.Add("..-.", "F");
+            MorseDecode.Add("--.", "G");
+            MorseDecode.Add("....", "H");
+            MorseDecode.Add("..", "I");
+            MorseDecode.Add(".---", "J");
+            MorseDecode.Add("-.-", "K");
+            MorseDecode.Add(".-..", "L");
+            MorseDecode.Add("--", "M");
+            MorseDecode.Add("-.", "N");
+            MorseDecode.Add("---", "O");
+            MorseDecode.Add(".--.", "P");
+            MorseDecode.Add("--.-", "Q");
+            MorseDecode.Add(".-.", "R");
+            MorseDecode.Add("...", "S");
+            MorseDecode.Add("-", "T");
+            MorseDecode.Add("..-", "U");
+            MorseDecode.Add("...-", "V");
+            MorseDecode.Add(".--", "W");
+            MorseDecode.Add("-..-", "X");
+            MorseDecode.Add("-.--", "Y");
+            MorseDecode.Add("--..", "Z");
+
+            MorseDecode.Add(".----", "1");
+            MorseDecode.Add("..---", "2");
+            MorseDecode.Add("...--", "3");
+            MorseDecode.Add("....-", "4");
+            MorseDecode.Add(".....", "5");
+            MorseDecode.Add("-....", "6");
+            MorseDecode.Add("--...", "7");
+            MorseDecode.Add("---..", "8");
+            MorseDecode.Add("----.", "9");
+            MorseDecode.Add("-----", "0");
+
+
+
+            throw new System.NotImplementedException("Please provide some code.");
+        }
         //public static string Decode(string morseCode)
         //{
         //    morseCode += " ";
