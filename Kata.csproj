@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="kyu\kyu6\ArrayDif.cs" />
     <Compile Include="kyu\kyu6\BouncingBall.cs" />
+    <Compile Include="kyu\kyu6\MorseCodeDecoder.cs" />
     <Compile Include="kyu\kyu6\TitleCase.cs" />
     <Compile Include="kyu\kyu7\Node.cs" />
     <Compile Include="Program.cs" />
