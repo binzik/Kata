@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Kata.kyu.kyu6
 {
+    //From course https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/csharp
+    //Status: Complete
     public class BouncingBall
     {
         public static string GetTestDescription()
@@ -14,7 +16,6 @@ namespace Kata.kyu.kyu6
         }
         public static int bouncingBall(double h, double bounce, double window)
         {
-            // your code
             int seen = 0;
             double ballLocation = h;
             if (h > 0 && bounce > 0 && bounce < 1 && window < h)
