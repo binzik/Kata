@@ -138,7 +138,7 @@ namespace Kata
         {
             Console.WriteLine(Digitizer.GetTestDescription());
             Console.WriteLine("---------------");
-            Console.WriteLine("Decoded: " + Digitizer.Digitize(54321));
+            Console.WriteLine("Decoded: " + Digitizer.Digitize(35231));
             Console.WriteLine("---------------");
         }
     }
