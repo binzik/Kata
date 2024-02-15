@@ -22,6 +22,7 @@ namespace Kata
                 Console.WriteLine("2. Kyu 7");
                 Console.WriteLine("3. Kyu 6");
 
+                Console.WriteLine("");
                 Console.WriteLine("0. Exit");
                 Console.WriteLine("Chose: ");
                 int chose = Int32.Parse(Console.ReadLine());
@@ -79,7 +80,13 @@ namespace Kata
                 Console.WriteLine("1. BouncingBall");
                 Console.WriteLine("2. MorseCodeDecoder");
 
-                switch (Int32.Parse(Console.ReadLine()))
+
+                Console.WriteLine("");
+                Console.WriteLine("0. Exit");
+
+                int menuSelect = Int32.Parse(Console.ReadLine());
+                
+                switch (menuSelect)
                 {
                     case 0:
                         isExit = true;
@@ -101,14 +108,12 @@ namespace Kata
             Console.WriteLine("Seen: "+BouncingBall.bouncingBall(3.0, 0.66, 1.5));
             Console.WriteLine("---------------");
         }
-
         static void MorseCodeDecoderTest()
         {
-            Console.WriteLine();
+            Console.WriteLine(MorseCodeDecoder.GetTestDescription());
             Console.WriteLine("---------------");
-            Console.WriteLine("Seen: " + MorseCodeDecoder.Decode(".... . -.--   .--- ..- -.. ."));
+            Console.WriteLine("Decoded: " + MorseCodeDecoder.Decode("   .... . -.--   .--- ..- -.. ."));
             Console.WriteLine("---------------");
         }
-
     }
 }
