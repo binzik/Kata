@@ -1,6 +1,8 @@
 ﻿using Kata.kyu.kyu6;
 using Kata.kyu.kyu7;
+using Kata.kyu.kyu8;
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace Kata
@@ -34,6 +36,7 @@ namespace Kata
                         break;
                     case 1:
                         Console.WriteLine("Chosen kyu 8");
+                        ShowMenuKyu8();
                         break;
                     case 2:
                         Console.WriteLine("Chosen kyu 7");
@@ -51,12 +54,28 @@ namespace Kata
 
         static void ShowMenuKyu8()
         {
-            while (true)
+            bool isExit = true;
+            while (isExit)
             {
                 Console.WriteLine("*** Kyu 8 ***");
-                Console.WriteLine("1. Kyu 8");
+                Console.WriteLine("1. Digitizer");
 
-                Int32.Parse(Console.ReadLine());
+
+                Console.WriteLine("");
+                Console.WriteLine("0. Exit");
+
+                int menuSelect = Int32.Parse(Console.ReadLine());
+
+                switch (menuSelect)
+                {
+                    case 0:
+                        isExit = true;
+                        break;
+                    case 1:
+                        DigitizerTest();
+                        break;
+
+                }
             }
         }
 
@@ -113,6 +132,13 @@ namespace Kata
             Console.WriteLine(MorseCodeDecoder.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Decoded: " + MorseCodeDecoder.Decode("   .... . -.--   .--- ..- -.. ."));
+            Console.WriteLine("---------------");
+        }
+        static void DigitizerTest()
+        {
+            Console.WriteLine(Digitizer.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Decoded: " + Digitizer.Digitize(54321));
             Console.WriteLine("---------------");
         }
     }
