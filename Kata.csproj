@@ -48,14 +48,13 @@
     <Compile Include="kyu\kyu6\MorseCodeDecoder.cs" />
     <Compile Include="kyu\kyu6\TitleCase.cs" />
     <Compile Include="kyu\kyu7\Node.cs" />
+    <Compile Include="kyu\kyu8\Digitizer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="kyu\kyu8\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
