@@ -40,6 +40,7 @@ namespace Kata
                         break;
                     case 2:
                         Console.WriteLine("Chosen kyu 7");
+                        ShowMenuKyu7();
                         break;
                     case 3:
                         Console.WriteLine("Chosen kyu 6");
@@ -69,7 +70,7 @@ namespace Kata
                 switch (menuSelect)
                 {
                     case 0:
-                        isExit = true;
+                        isExit = false;
                         break;
                     case 1:
                         DigitizerTest();
@@ -81,19 +82,35 @@ namespace Kata
 
         static void ShowMenuKyu7()
         {
-            while (true)
+            bool isExit = true;
+            while (isExit)
             {
                 Console.WriteLine("*** Kyu 7 ***");
-                Console.WriteLine("1. Kyu 8");
+                Console.WriteLine("1. Printer");
 
-                Int32.Parse(Console.ReadLine());
+
+                Console.WriteLine("");
+                Console.WriteLine("0. Exit");
+
+                int menuSelect = Int32.Parse(Console.ReadLine());
+
+                switch (menuSelect)
+                {
+                    case 0:
+                        isExit = false;
+                        break;
+                    case 1:
+                        PrinterTest();
+                        break;
+
+                }
             }
         }
 
         static void ShowMenuKyu6()
         {
-            bool isExit = false;
-            while (!isExit)
+            bool isExit = true;
+            while (isExit)
             {
                 Console.WriteLine("*** Kyu 6 ***");
                 Console.WriteLine("1. BouncingBall");
@@ -108,7 +125,7 @@ namespace Kata
                 switch (menuSelect)
                 {
                     case 0:
-                        isExit = true;
+                        isExit = false;
                         break;
                     case 1:
                         BouncingBallTest();
@@ -139,6 +156,13 @@ namespace Kata
             Console.WriteLine(Digitizer.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Decoded: " + Digitizer.Digitize(35231));
+            Console.WriteLine("---------------");
+        }
+        static void PrinterTest()
+        {
+            Console.WriteLine(Printer.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Printer Error: " + Printer.PrinterError("aaaxbbbbyyhwawiwjjjwwm"));
             Console.WriteLine("---------------");
         }
     }
