@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="kyu\kyu5\PaginationHelper.cs" />
     <Compile Include="kyu\kyu6\ArrayDif.cs" />
     <Compile Include="kyu\kyu6\BouncingBall.cs" />
     <Compile Include="kyu\kyu6\MorseCodeDecoder.cs" />

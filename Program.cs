@@ -1,4 +1,5 @@
-﻿using Kata.kyu.kyu6;
+﻿using Kata.kyu.kyu5;
+using Kata.kyu.kyu6;
 using Kata.kyu.kyu7;
 using Kata.kyu.kyu8;
 using System;
@@ -23,6 +24,7 @@ namespace Kata
                 Console.WriteLine("1. Kyu 8");
                 Console.WriteLine("2. Kyu 7");
                 Console.WriteLine("3. Kyu 6");
+                Console.WriteLine("4. Kyu 5");
 
                 Console.WriteLine("");
                 Console.WriteLine("0. Exit");
@@ -45,6 +47,10 @@ namespace Kata
                     case 3:
                         Console.WriteLine("Chosen kyu 6");
                         ShowMenuKyu6();
+                        break;
+                    case 4:
+                        Console.WriteLine("Chosen kyu 6");
+                        ShowMenuKyu5();
                         break;
                     default:
                         Console.WriteLine("Chosen incorrectly");
@@ -137,6 +143,33 @@ namespace Kata
             }
         }
 
+        static void ShowMenuKyu5()
+        {
+            bool isExit = true;
+            while (isExit)
+            {
+                Console.WriteLine("*** Kyu 8 ***");
+                Console.WriteLine("1. PaginationHelper");
+
+
+                Console.WriteLine("");
+                Console.WriteLine("0. Exit");
+
+                int menuSelect = Int32.Parse(Console.ReadLine());
+
+                switch (menuSelect)
+                {
+                    case 0:
+                        isExit = false;
+                        break;
+                    case 1:
+                        PaginationHelperTest();
+                        break;
+
+                }
+            }
+        }
+
         static void BouncingBallTest()
         {
             Console.WriteLine(BouncingBall.GetTestDescription());
@@ -163,6 +196,24 @@ namespace Kata
             Console.WriteLine(Printer.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Printer Error: " + Printer.PrinterError("aaaxbbbbyyhwawiwjjjwwm"));
+            Console.WriteLine("---------------");
+        }
+        static void PaginationHelperTest()
+        {
+            var helper = new PaginationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f', 'g' }, 4);
+
+            Console.WriteLine(helper.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Page Count: " + helper.PageCount);
+            Console.WriteLine("Item Count: " + helper.ItemCount);
+            Console.WriteLine("Page Item Count: " + helper.PageItemCount(0));
+            Console.WriteLine("Page Item Count: " + helper.PageItemCount(1));
+            Console.WriteLine("Page Item Count: " + helper.PageItemCount(2));
+            Console.WriteLine();
+            Console.WriteLine("Page Item Count: " + helper.PageIndex(5));
+            Console.WriteLine("Page Item Count: " + helper.PageIndex(2));
+            Console.WriteLine("Page Item Count: " + helper.PageIndex(20));
+            Console.WriteLine("Page Item Count: " + helper.PageIndex(-10));
             Console.WriteLine("---------------");
         }
     }
