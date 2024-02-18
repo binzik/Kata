@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -7,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace Kata.kyu.kyu5
 {
+    // Course: https://www.codewars.com/kata/515bb423de843ea99400000a/train/csharp
+    //Status: Aborded
     public class PaginationHelper<T>
     {
         public string GetTestDescription()
@@ -14,7 +17,7 @@ namespace Kata.kyu.kyu5
             return "For this exercise you will be strengthening your page-fu mastery. You will complete the PaginationHelper class, which is a utility class helpful for querying paging information related to an array.\r\n\r\nThe class is designed to take in an array of values and an integer indicating how many items will be allowed per each page. The types of values contained within the collection/array are not relevant.\r\n\r\nThe following are some examples of how this class is used:\r\n\r\nvar helper = new PaginationHelper<char>(new List<char>{'a', 'b', 'c', 'd', 'e', 'f'}, 4);\r\nhelper.PageCount; // should == 2\r\nhelper.ItemCount; // should == 6\r\nhelper.PageItemCount(0); // should == 4\r\nhelper.PageItemCount(1); // last page - should == 2\r\nhelper.PageItemCount(2); // should == -1 since the page is invalid\r\n\r\n// pageIndex takes an item index and returns the page that it belongs on\r\nhelper.PageIndex(5); // should == 1 (zero based index)\r\nhelper.PageIndex(2); // should == 0\r\nhelper.PageIndex(20); // should == -1\r\nhelper.PageIndex(-10); // should == -1";
         }
 
-
+        private Dictionary<int, T> pagination = new Dictionary<int, T>();
 
         // TODO: Complete this class
 
@@ -26,19 +29,50 @@ namespace Kata.kyu.kyu5
         public PaginationHelper(IList<T> collection, int itemsPerPage)
         {
             this.ItemCount = collection.Count;
-            this.PageCount = ;
+            this.PageCount = CalculatePages(collection.Count, itemsPerPage);
+            //SetValuesToPages(itemsPerPage);
         }
 
-        private int CountPagesForItems(int items, int itemsPerPage)
+        private int CalculatePages(int items, int itemsPerPage)
         {
-            int restItems = items;
-            int pages = 0;
-            while (restItems > itemsPerPage)
-            {
-                restItems = items - itemsPerPage;
-                if()
-            }
+            double pagesInDouble = (double)items / (double)itemsPerPage;
+            int pagesInInt = items / itemsPerPage;
+
+            return pagesInDouble>pagesInInt ? pagesInInt+1 : pagesInInt;
         }
+
+        //private void SetValuesToPages(int maxValuePerPage)
+        //{
+        //    int i = 0;
+        //    List<char> list = new List<char>();
+
+        //    for(int j =  0; j < maxValuePerPage; j++)
+        //    {
+        //        if(i == maxValuePerPage)
+        //        {
+
+        //        }
+        //        else 
+        //        {
+                    
+        //        }
+        //    }
+        //    pagination.Clear();
+        //    pagination.Add()
+        //}
+        //private int CountPagesForItems(int items, int itemsPerPage)
+        //{
+        //    int pages = items/itemsPerPage;
+
+
+        //    //int restItems = items;
+        //    //int pages = 0;
+        //    //while (restItems > itemsPerPage)
+        //    //{
+        //    //    restItems = items - itemsPerPage;
+        //    //    if()
+        //    //}
+        //}
         /// <summary>
         /// The number of items within the collection
         /// </summary>

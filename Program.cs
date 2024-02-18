@@ -121,6 +121,7 @@ namespace Kata
                 Console.WriteLine("*** Kyu 6 ***");
                 Console.WriteLine("1. BouncingBall");
                 Console.WriteLine("2. MorseCodeDecoder");
+                Console.WriteLine("3. SpinWords");
 
 
                 Console.WriteLine("");
@@ -138,6 +139,9 @@ namespace Kata
                         break;
                     case 2:
                         MorseCodeDecoderTest();
+                        break;
+                    case 3:
+                        SpinWordsTest();
                         break;
                 }
             }
@@ -170,6 +174,7 @@ namespace Kata
             }
         }
 
+        //Completed
         static void BouncingBallTest()
         {
             Console.WriteLine(BouncingBall.GetTestDescription());
@@ -198,9 +203,18 @@ namespace Kata
             Console.WriteLine("Printer Error: " + Printer.PrinterError("aaaxbbbbyyhwawiwjjjwwm"));
             Console.WriteLine("---------------");
         }
+        static void SpinWordsTest()
+        {
+            Console.WriteLine(SpinWords.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Spin words: " + SpinWords.SpinWordss("Hey fellow warriors"));
+            Console.WriteLine("---------------");
+        }
+
+        //Aborded
         static void PaginationHelperTest()
         {
-            var helper = new PaginationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f', 'g' }, 4);
+            var helper = new PaginationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f'}, 4);
 
             Console.WriteLine(helper.GetTestDescription());
             Console.WriteLine("---------------");
