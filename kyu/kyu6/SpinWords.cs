@@ -15,15 +15,24 @@ namespace Kata.kyu.kyu6
         public static string SpinWordss(string sentence)
         {
             string[] sentences = sentence.Split();
-            string result = string.Empty;
+            List<string> words = new List<string>();
             foreach (string s in sentences)
             {
-
-                if (s.Length >= 5){ result +=s.Reverse().ToArray(); }
-                else { result += s; }
+                
+                if (s.Length >= 5)
+                {
+                    string word="";
+                    for (int j = s.Length-1; j>=0; j--)
+                    {
+                        word += s[j];
+                    }
+                    words.Add(word);
+                }
+                else { words.Add(s); }
 
             }
-            return result;
+            
+            return string.Join(" ", words);
         }
     }
 }
