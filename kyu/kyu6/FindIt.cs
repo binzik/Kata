@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kata.kyu.kyu6
 {
+
     internal class FindIt
     {
         public static int find_it(int[] seq)
@@ -19,19 +20,16 @@ namespace Kata.kyu.kyu6
                 }
                 else keyValuePairs.Add(i, i);
             }
-            int maxIndex = 0;
-            int maxValue = int.MinValue;
-
+            int oddIndex = 0;
             //This part is wrong
-            foreach(int i in keyValuePairs.Values)
+            foreach(var i in keyValuePairs)
             {
-                if (keyValuePairs[i] > maxValue)
+                if (i.Value%2 != 0)
                 {
-                    maxValue = keyValuePairs[i];
-                    maxIndex = i;
+                    oddIndex = i.Key;
                 }
             }
-            return -1;
+            return oddIndex;
         }
     }
 }
