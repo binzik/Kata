@@ -122,6 +122,7 @@ namespace Kata
                 Console.WriteLine("1. BouncingBall");
                 Console.WriteLine("2. MorseCodeDecoder");
                 Console.WriteLine("3. SpinWords");
+                Console.WriteLine("4. HighestScoringWord");
 
 
                 Console.WriteLine("");
@@ -142,6 +143,9 @@ namespace Kata
                         break;
                     case 3:
                         SpinWordsTest();
+                        break;
+                    case 4:
+                        HighestScoringWordTest();
                         break;
                 }
             }
@@ -208,6 +212,13 @@ namespace Kata
             Console.WriteLine(SpinWords.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Spin words: " + SpinWords.SpinWordss("Hey fellow warriors"));
+            Console.WriteLine("---------------");
+        }
+        static void HighestScoringWordTest()
+        {
+            Console.WriteLine(HighestScoringWord.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Spin words: " + HighestScoringWord.High("man i need a taxi up to ubud"));
             Console.WriteLine("---------------");
         }
 
