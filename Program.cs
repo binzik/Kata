@@ -119,10 +119,11 @@ namespace Kata
             while (isExit)
             {
                 Console.WriteLine("*** Kyu 6 ***");
-                Console.WriteLine("1. BouncingBall");
-                Console.WriteLine("2. MorseCodeDecoder");
-                Console.WriteLine("3. SpinWords");
-                Console.WriteLine("4. HighestScoringWord");
+                Console.WriteLine("1. Bouncing Ball");
+                Console.WriteLine("2. Morse Code Decoder");
+                Console.WriteLine("3. Spin Words");
+                Console.WriteLine("4. Highest Scoring Word");
+                Console.WriteLine("5. Count a Spiral");
 
 
                 Console.WriteLine("");
@@ -146,6 +147,9 @@ namespace Kata
                         break;
                     case 4:
                         HighestScoringWordTest();
+                        break;
+                    case 5:
+                        CountASpiralTest();
                         break;
                 }
             }
@@ -219,6 +223,13 @@ namespace Kata
             Console.WriteLine(HighestScoringWord.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Spin words: " + HighestScoringWord.High("man i need a taxi up to ubud"));
+            Console.WriteLine("---------------");
+        }
+        static void CountASpiralTest()
+        {
+            Console.WriteLine(CountASpiral.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Spin words: " + CountASpiral.Sum(7));
             Console.WriteLine("---------------");
         }
 
