@@ -56,6 +56,7 @@
     <Compile Include="kyu\kyu7\Node.cs" />
     <Compile Include="kyu\kyu7\Printer.cs" />
     <Compile Include="kyu\kyu8\Digitizer.cs" />
+    <Compile Include="kyu\kyu8\YouOnlyNeedOne.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
