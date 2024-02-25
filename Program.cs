@@ -93,6 +93,7 @@ namespace Kata
             {
                 Console.WriteLine("*** Kyu 7 ***");
                 Console.WriteLine("1. Printer");
+                Console.WriteLine("2. Binary Addition");
 
 
                 Console.WriteLine("");
@@ -107,6 +108,9 @@ namespace Kata
                         break;
                     case 1:
                         PrinterTest();
+                        break;
+                    case 2:
+                        BinaryAdditionTest();
                         break;
 
                 }
@@ -233,6 +237,13 @@ namespace Kata
             Console.WriteLine("---------------");
         }
 
+        static void BinaryAdditionTest()
+        {
+            Console.WriteLine(BinaryAddition.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Spin words: " + BinaryAddition.AddBinary(5, 9));
+            Console.WriteLine("---------------");
+        }
         //Aborded
         static void PaginationHelperTest()
         {
