@@ -66,6 +66,8 @@ namespace Kata
             {
                 Console.WriteLine("*** Kyu 8 ***");
                 Console.WriteLine("1. Digitizer");
+                Console.WriteLine("2. YouOnlyNeedOne");
+                Console.WriteLine("3. ZeroFuel");
 
 
                 Console.WriteLine("");
@@ -80,6 +82,12 @@ namespace Kata
                         break;
                     case 1:
                         DigitizerTest();
+                        break;
+                    case 2:
+                        //
+                        break;
+                    case 3:
+                        ZeroFuelTest();
                         break;
 
                 }
@@ -244,6 +252,15 @@ namespace Kata
             Console.WriteLine("Spin words: " + BinaryAddition.AddBinary(5, 9));
             Console.WriteLine("---------------");
         }
+        
+        static void ZeroFuelTest()
+        {
+            Console.WriteLine(ZeroFuel.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Will we arrive: " + ZeroFuel.IsZeroFuel(50, 25, 2));
+            Console.WriteLine("---------------");
+        }
+
         //Aborded
         static void PaginationHelperTest()
         {
