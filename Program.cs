@@ -244,7 +244,6 @@ namespace Kata
             Console.WriteLine("Spin words: " + CountASpiral.Sum(7));
             Console.WriteLine("---------------");
         }
-
         static void BinaryAdditionTest()
         {
             Console.WriteLine(BinaryAddition.GetTestDescription());
@@ -252,7 +251,6 @@ namespace Kata
             Console.WriteLine("Spin words: " + BinaryAddition.AddBinary(5, 9));
             Console.WriteLine("---------------");
         }
-        
         static void ZeroFuelTest()
         {
             Console.WriteLine(ZeroFuel.GetTestDescription());
