@@ -68,6 +68,7 @@ namespace Kata
                 Console.WriteLine("1. Digitizer");
                 Console.WriteLine("2. YouOnlyNeedOne");
                 Console.WriteLine("3. ZeroFuel");
+                Console.WriteLine("4. ZeroFuel");
 
 
                 Console.WriteLine("");
@@ -88,6 +89,9 @@ namespace Kata
                         break;
                     case 3:
                         ZeroFuelTest();
+                        break;
+                    case 4:
+                        PillarsTest();
                         break;
 
                 }
@@ -256,6 +260,13 @@ namespace Kata
             Console.WriteLine(ZeroFuel.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Will we arrive: " + ZeroFuel.IsZeroFuel(50, 25, 2));
+            Console.WriteLine("---------------");
+        }
+        static void PillarsTest()
+        {
+            Console.WriteLine(Pillars.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Will we arrive: " + Pillars.PillarsMath(2, 10, 10));
             Console.WriteLine("---------------");
         }
 
