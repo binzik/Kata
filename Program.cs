@@ -68,7 +68,7 @@ namespace Kata
                 Console.WriteLine("1. Digitizer");
                 Console.WriteLine("2. YouOnlyNeedOne");
                 Console.WriteLine("3. ZeroFuel");
-                Console.WriteLine("4. ZeroFuel");
+                Console.WriteLine("4. Pillars");
 
 
                 Console.WriteLine("");
