@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu8
 {
     //Course https://www.codewars.com/kata/5bb0c58f484fcd170700063d/train/csharp
-    //Status: Not Ended
+    //Status: Complete
     internal class Pillars
     {
         public static string GetTestDescription()
