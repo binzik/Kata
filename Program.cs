@@ -144,6 +144,7 @@ namespace Kata
                 Console.WriteLine("3. Spin Words");
                 Console.WriteLine("4. Highest Scoring Word");
                 Console.WriteLine("5. Count a Spiral");
+                Console.WriteLine("6. Who likes it?");
 
 
                 Console.WriteLine("");
@@ -170,6 +171,9 @@ namespace Kata
                         break;
                     case 5:
                         CountASpiralTest();
+                        break;
+                    case 6:
+                        WhoLikesItTest();
                         break;
                 }
             }
@@ -278,6 +282,8 @@ namespace Kata
             Console.WriteLine(TheNail.GetTestDescription());
             Console.WriteLine("---------------");
 
+
+
             int l = 77;
             int playerHit, systemHit = 3;
             while (l > 0)
@@ -301,6 +307,17 @@ namespace Kata
                     break;
                 }
             }
+            Console.WriteLine("---------------");
+        }
+        static void WhoLikesItTest()
+        {
+            Console.WriteLine(WhoLikesIt.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Who likes it?: " + WhoLikesIt.Likes(new string[] { }));
+            Console.WriteLine("Who likes it?: " + WhoLikesIt.Likes(new string[] { "Peter"}));
+            Console.WriteLine("Who likes it?: " + WhoLikesIt.Likes(new string[] {"Jacob","Alex"}));
+            Console.WriteLine("Who likes it?: " + WhoLikesIt.Likes(new string[] {"Max","John", "Mark"}));
+            Console.WriteLine("Who likes it?: " + WhoLikesIt.Likes(new string[] {"Alex","Jacob", "Mark", "Max"}));
             Console.WriteLine("---------------");
         }
 
