@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu6
 {
     //Course: https://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/csharp
-    //Status: Created
+    //Status: Completed
     internal class WhoLikesIt
     {
         public static string GetTestDescription()
@@ -16,7 +16,29 @@ namespace Kata.kyu.kyu6
         }
         public static string Likes(string[] name)
         {
-            return "";
+            int countOfPeople = name.Length;
+
+            if (countOfPeople == 0)
+            {
+                return "no one likes this";
+            }
+            else if (countOfPeople == 1)
+            {
+                return name[0] + " likes this";
+            }
+            else if (countOfPeople == 2)
+            {
+                return name[0] + " and " + name[1] + " like this";
+            }
+            else if (countOfPeople == 3)
+            {
+
+                return ($"{name[0]}, {name[1]} and {name[2]} like this");
+            }
+            else
+            {
+                return $"{name[0]}, {name[1]} and {name.Length - 2} others like this";
+            }
         }
     }
 }
