@@ -106,6 +106,7 @@ namespace Kata
                 Console.WriteLine("*** Kyu 7 ***");
                 Console.WriteLine("1. Printer");
                 Console.WriteLine("2. Binary Addition");
+                Console.WriteLine("3. The Nail");
 
 
                 Console.WriteLine("");
@@ -123,6 +124,9 @@ namespace Kata
                         break;
                     case 2:
                         BinaryAdditionTest();
+                        break;
+                    case 3:
+                        TheNailTest();
                         break;
 
                 }
@@ -267,6 +271,36 @@ namespace Kata
             Console.WriteLine(Pillars.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Will we arrive: " + Pillars.PillarsMath(2, 10, 10));
+            Console.WriteLine("---------------");
+        }
+        static void TheNailTest()
+        {
+            Console.WriteLine(TheNail.GetTestDescription());
+            Console.WriteLine("---------------");
+
+            int l = 77;
+            int playerHit, systemHit = 3;
+            while (l > 0)
+            {
+                playerHit = TheNail.Hit(l);
+                if (playerHit < 1 || playerHit > 3)
+                {
+                    Console.WriteLine("Your strength of strike can be only 1, 2 or 3 units");
+                    break;
+                }
+                l -= playerHit;
+                if (l <= 0)
+                {
+                    Console.WriteLine("You win!");
+                    break;
+                }
+                l -= systemHit;
+                if (l <= 0)
+                {
+                    Console.WriteLine($"Player {l + systemHit + playerHit} -> {l + systemHit} \nAnother guy {l + systemHit} -> {l}");
+                    break;
+                }
+            }
             Console.WriteLine("---------------");
         }
 
