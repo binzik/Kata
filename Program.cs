@@ -149,6 +149,7 @@ namespace Kata
                 Console.WriteLine("4. Highest Scoring Word");
                 Console.WriteLine("5. Count a Spiral");
                 Console.WriteLine("6. Who likes it?");
+                Console.WriteLine("7. Sum of Digits/ Digital Root");
 
 
                 Console.WriteLine("");
@@ -178,6 +179,9 @@ namespace Kata
                         break;
                     case 6:
                         WhoLikesItTest();
+                        break;
+                    case 7:
+                        SumOfDigitsTest();
                         break;
                 }
             }

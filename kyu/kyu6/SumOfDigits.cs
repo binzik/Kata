@@ -20,14 +20,16 @@ namespace Kata.kyu.kyu6
             while (n > 9)
             {
                 string digitToString = n.ToString();
-                int[] digits = new int[digitToString.Length];
+                //int[] digits = new int[digitToString.Length];
+                long r = 0;
                 foreach (char d in digitToString)
                 {
-
+                    //digits[i] = d-48;
+                    r += d - 48;
                 }
+                n = r;
             }
-
-            return 0;
+            return (int)n;
         }
     }
 }
