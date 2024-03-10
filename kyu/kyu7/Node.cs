@@ -37,7 +37,11 @@ namespace Kata.kyu.kyu7
 
         public static Node BuildOneTwoThree()
         {
-            throw new NotImplementedException();
+            Node chained = null;
+            chained = Node.Push(chained, 3);
+            chained = Node.Push(chained, 2);
+            chained = Node.Push(chained, 1);
+            return chained;
         }
     }
 }

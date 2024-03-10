@@ -130,7 +130,7 @@ namespace Kata
                         TheNailTest();
                         break;
                     case 4:
-                        TheNailTest();
+                        NodeTest();
                         break;
 
                 }
@@ -328,10 +328,31 @@ namespace Kata
         {
             Console.WriteLine(Node.GetTestDescription());
             Console.WriteLine("---------------");
+            
+            //Create Node test
+            //Null exception
+            if(1 == Node.Push(null, 1).Data)
+            {
+                Console.WriteLine("Result : Success");
+            }
+            if (null == Node.Push(null, 1).Next)
+            {
+                Console.WriteLine("Result : Success");
+            }
+            if (2 == Node.Push(new Node(1), 2).Data)
+            {
+                Console.WriteLine("Result : Success");
+            }
+            if (1 == Node.Push(new Node(1), 2).Next.Data)
+            {
+                Console.WriteLine("Result : Success");
+            }
+
             Node chained = null;
             chained = Node.Push(chained, 3);
             chained = Node.Push(chained, 2);
             chained = Node.Push(chained, 1);
+
 
             Console.WriteLine("---------------");
         }
