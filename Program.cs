@@ -107,6 +107,7 @@ namespace Kata
                 Console.WriteLine("1. Printer");
                 Console.WriteLine("2. Binary Addition");
                 Console.WriteLine("3. The Nail");
+                Console.WriteLine("4. Linked Lists - Push&BuildOneTwoThree");
 
 
                 Console.WriteLine("");
@@ -126,6 +127,9 @@ namespace Kata
                         BinaryAdditionTest();
                         break;
                     case 3:
+                        TheNailTest();
+                        break;
+                    case 4:
                         TheNailTest();
                         break;
 
@@ -318,6 +322,17 @@ namespace Kata
             Console.WriteLine("Who likes it?: " + WhoLikesIt.Likes(new string[] {"Jacob","Alex"}));
             Console.WriteLine("Who likes it?: " + WhoLikesIt.Likes(new string[] {"Max","John", "Mark"}));
             Console.WriteLine("Who likes it?: " + WhoLikesIt.Likes(new string[] {"Alex","Jacob", "Mark", "Max"}));
+            Console.WriteLine("---------------");
+        }
+        static void NodeTest()
+        {
+            Console.WriteLine(Node.GetTestDescription());
+            Console.WriteLine("---------------");
+            Node chained = null;
+            chained = Node.Push(chained, 3);
+            chained = Node.Push(chained, 2);
+            chained = Node.Push(chained, 1);
+
             Console.WriteLine("---------------");
         }
 
