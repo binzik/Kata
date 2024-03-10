@@ -356,6 +356,15 @@ namespace Kata
 
             Console.WriteLine("---------------");
         }
+        static void SumOfDigitsTest()
+        {
+            Console.WriteLine(SumOfDigits.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result?: " + (SumOfDigits.DigitalRoot(493193) == 2 ? "Success!" : "Failure!"));
+            Console.WriteLine("Result?: " + (SumOfDigits.DigitalRoot(132189) == 6 ? "Success!" : "Failure!"));
+            Console.WriteLine("Result?: " + (SumOfDigits.DigitalRoot(16) == 7 ? "Success!" : "Failure!"));
+            Console.WriteLine("---------------");
+        }
 
         //Aborded
         static void PaginationHelperTest()
