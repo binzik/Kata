@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu6
 {
     //Course: https://www.codewars.com/kata/541c8630095125aba6000c00/train/csharp
-    //Status: In Progress
+    //Status: Complete
     internal class SumOfDigits
     {
         public static string GetTestDescription()

@@ -150,6 +150,7 @@ namespace Kata
                 Console.WriteLine("5. Count a Spiral");
                 Console.WriteLine("6. Who likes it?");
                 Console.WriteLine("7. Sum of Digits/ Digital Root");
+                Console.WriteLine("8. Create your number");
 
 
                 Console.WriteLine("");
@@ -182,6 +183,9 @@ namespace Kata
                         break;
                     case 7:
                         SumOfDigitsTest();
+                        break;
+                    case 8:
+                        CreatePhoneNumberTest();
                         break;
                 }
             }
@@ -368,6 +372,13 @@ namespace Kata
             Console.WriteLine("Result?: " + (SumOfDigits.DigitalRoot(132189) == 6 ? "Success!" : "Failure!"));
             Console.WriteLine("Result?: " + (SumOfDigits.DigitalRoot(16) == 7 ? "Success!" : "Failure!"));
             Console.WriteLine("Result?: " + (SumOfDigits.DigitalRoot(942) == 6 ? "Success!" : "Failure!"));
+            Console.WriteLine("---------------");
+        }
+        static void CreatePhoneNumberTest()
+        {
+            Console.WriteLine(CreatePhoneNumber.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Your number: " + CreatePhoneNumber.Create(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }));
             Console.WriteLine("---------------");
         }
 
