@@ -108,6 +108,7 @@ namespace Kata
                 Console.WriteLine("2. Binary Addition");
                 Console.WriteLine("3. The Nail");
                 Console.WriteLine("4. Linked Lists - Push&BuildOneTwoThree");
+                Console.WriteLine("5. Minectaft StonePick making");
 
 
                 Console.WriteLine("");
@@ -131,6 +132,9 @@ namespace Kata
                         break;
                     case 4:
                         NodeTest();
+                        break;
+                    case 5:
+                        StonePickAxeTest();
                         break;
 
                 }
@@ -379,6 +383,14 @@ namespace Kata
             Console.WriteLine(CreatePhoneNumber.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Your number: " + CreatePhoneNumber.Create(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }));
+            Console.WriteLine("---------------");
+        }
+        static void StonePickAxeTest()
+        {
+            Console.WriteLine(StonePickAxe.GetTestDescription());
+            Console.WriteLine("---------------");
+            //Console.WriteLine("How many i can make: " + StonePickAxe.StonePick(new string[] { "Cobblestone", "Cobblestone", "Cobblestone", "Cobblestone", "Cobblestone", "Cobblestone", "Wood" }));
+            Console.WriteLine("How many i can make: " + StonePickAxe.StonePick(new string[] { "Sticks", "Sticks", "Cobblestone" }));
             Console.WriteLine("---------------");
         }
 
