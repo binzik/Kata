@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu7
 {
     //Course: https://www.codewars.com/kata/65c0161a2380ae78052e5731/train/csharp
-    //Status: In Progress
+    //Status: Complete
     internal class StonePickAxe
     {
         public static string GetTestDescription()
@@ -57,7 +57,7 @@ namespace Kata.kyu.kyu7
 
 
 
-                return cobble>sticks ? sticks/2 : cobble/3 ;
+                return cobble/3>sticks/2 ? sticks/2 : cobble/3 ;
             }
             else { return 0; }
 
