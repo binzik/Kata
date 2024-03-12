@@ -48,17 +48,50 @@ namespace Kata.kyu.kyu7
                 int cobble = inventory["Cobblestone"];
 
 
-                while (sticks != 0)
-                {
-                    int t = sticks;
-                    sticks = cobble % sticks;
-                    cobble = t;
-                }
+                //while (sticks != 0)
+                //{
+                //    int t = sticks;
+                //    sticks = cobble % sticks;
+                //    cobble = t;
+                //}
 
-                return cobble;
+
+
+                return cobble>sticks ? sticks/2 : cobble/3 ;
             }
             else { return 0; }
 
+        }
+
+        public static string[] TransformStringToArray(string inventory)
+        {
+            string[] arr = new string[inventory.Length];
+            
+            int i = 0;
+            foreach(char item in inventory)
+            {
+                string item_name = "";
+                switch (item.ToString())
+                {
+                    case "S":
+                        item_name = "Sticks";
+                        break;
+                    case "W":
+                        item_name = "Wood";
+                        break;
+                    case "C":
+                        item_name = "Cobblestone";
+                        break;
+                    default:
+                        break;
+                }
+                        
+                arr[i] = item_name;
+                i++;
+            }
+
+
+            return arr;
         }
     }
 }

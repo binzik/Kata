@@ -390,7 +390,8 @@ namespace Kata
             Console.WriteLine(StonePickAxe.GetTestDescription());
             Console.WriteLine("---------------");
             //Console.WriteLine("How many i can make: " + StonePickAxe.StonePick(new string[] { "Cobblestone", "Cobblestone", "Cobblestone", "Cobblestone", "Cobblestone", "Cobblestone", "Wood" }));
-            Console.WriteLine("How many i can make: " + StonePickAxe.StonePick(new string[] { "Sticks", "Sticks", "Cobblestone" }));
+            //Console.WriteLine("How many i can make: " + StonePickAxe.StonePick(new string[] { "Sticks", "Sticks", "Cobblestone" }));
+            Console.WriteLine("How many i can make: " + StonePickAxe.StonePick(StonePickAxe.TransformStringToArray("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC")));
             Console.WriteLine("---------------");
         }
 
