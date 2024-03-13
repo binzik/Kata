@@ -63,7 +63,23 @@ namespace Kata.kyu.kyu5
         /// <returns>The number of items on the specified page or -1 for pageIndex values that are out of range</returns>
         public int PageItemCount(int pageIndex)
         {
-            return 0;
+            pageIndex += 1;
+            if (pageIndex <= PageCount)
+            {
+                if(this._collection.Count % _itemsPerPage == 0)
+                {
+                    return this._itemsPerPage;
+                }
+                else
+                {
+                    if (pageIndex < PageCount)
+                    {
+                        return this._itemsPerPage;
+                    }
+                    else return (this._collection.Count % this._itemsPerPage);
+                }
+            }
+            else return -1;
         }
 
         /// <summary>
@@ -73,7 +89,11 @@ namespace Kata.kyu.kyu5
         /// <returns>The zero-based page index of the page containing the item at the given item index or -1 if the item index is out of range</returns>
         public int PageIndex(int itemIndex)
         {
-            return 0;
+            if (this._collection.Count >= itemIndex && itemIndex >= 0)
+            {
+                return 0;
+            }
+            else return -1;
         }
     }
 }
