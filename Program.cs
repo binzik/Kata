@@ -395,11 +395,10 @@ namespace Kata
             Console.WriteLine("How many i can make: " + StonePickAxe.StonePick(StonePickAxe.TransformStringToArray("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCSSSSSSSSWWWW")));
             Console.WriteLine("---------------");
         }
-
-        //Aborded
         static void PaginationHelperTest()
         {
-            var helper = new PaginationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f'}, 4);
+            //var helper = new PaginationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f' }, 4);
+            var helper = new PaginationHelper<int>(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 }, 10);
 
             Console.WriteLine(helper.GetTestDescription());
             Console.WriteLine("---------------");
@@ -413,6 +412,9 @@ namespace Kata
             Console.WriteLine("Page Item Count: " + helper.PageIndex(2));
             Console.WriteLine("Page Item Count: " + helper.PageIndex(20));
             Console.WriteLine("Page Item Count: " + helper.PageIndex(-10));
+
+            Console.WriteLine(".");
+            Console.WriteLine("Page Item Count: " + helper.PageIndex(0));
             Console.WriteLine("---------------");
         }
     }

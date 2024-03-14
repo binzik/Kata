@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu5
 {
     // Course: https://www.codewars.com/kata/515bb423de843ea99400000a/train/csharp
-    //Status: Aborded
+    //Status: Complete
     public class PaginationHelper<T>
     {
         public string GetTestDescription()
@@ -20,6 +20,7 @@ namespace Kata.kyu.kyu5
         // TODO: Complete this class
         private IList<T> _collection;
         private int _itemsPerPage;
+        //private IList<List<T>> _pages;
         /// <summary>
         /// Constructor, takes in a list of items and the number of items that fit within a single page
         /// </summary>
@@ -29,6 +30,26 @@ namespace Kata.kyu.kyu5
         {
             this._collection = collection;
             this._itemsPerPage = itemsPerPage;
+
+            //this._pages = new List<List<T>>();
+
+            //List<T> items = new List<T>();
+            //int itemsInPage = 0;
+            //int itemIndex = 0;
+            //foreach (var item in collection)
+            //{
+                
+            //    items.Add(item);
+            //    itemsInPage++;
+            //    itemIndex++;
+
+            //    if(itemsInPage == _itemsPerPage || itemIndex==collection.Count)
+            //    {
+            //        _pages.Add(items);
+            //        items.Clear();
+            //        itemsInPage = 0;
+            //    }
+            //}
         }
 
         /// <summary>
@@ -64,7 +85,7 @@ namespace Kata.kyu.kyu5
         public int PageItemCount(int pageIndex)
         {
             pageIndex += 1;
-            if (pageIndex <= PageCount)
+            if (pageIndex <= PageCount && pageIndex>0)
             {
                 if(this._collection.Count % _itemsPerPage == 0)
                 {
@@ -89,11 +110,32 @@ namespace Kata.kyu.kyu5
         /// <returns>The zero-based page index of the page containing the item at the given item index or -1 if the item index is out of range</returns>
         public int PageIndex(int itemIndex)
         {
-            if (this._collection.Count >= itemIndex && itemIndex >= 0)
+            //if (this._collection.Count - 1 >= itemIndex && itemIndex > 0)
+            //{
+            //    int page = (itemIndex / this._itemsPerPage);
+            //    if ((itemIndex % this._itemsPerPage) != 0) page++;
+            //    return page - 1;
+            //}
+            //else if (itemIndex == 0) return 0;
+            //else return -1;
+
+            if (this._collection.Count == 0)
             {
-                return 0;
+                return -1;
             }
-            else return -1;
+            else if (-1 < itemIndex && this._collection.Count > itemIndex)
+            {
+                int page = (itemIndex / this._itemsPerPage);
+                if ((itemIndex % this._itemsPerPage) != 0)
+                {
+                    page++;
+                    return page - 1;
+                }
+                return page;
+
+            }
+            else
+                return -1;
         }
     }
 }
