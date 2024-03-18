@@ -63,6 +63,7 @@
     <Compile Include="kyu\kyu7\TheNail.cs" />
     <Compile Include="kyu\kyu8\Digitizer.cs" />
     <Compile Include="kyu\kyu8\Pillars.cs" />
+    <Compile Include="kyu\kyu8\SquareNSum.cs" />
     <Compile Include="kyu\kyu8\YouOnlyNeedOne.cs" />
     <Compile Include="kyu\kyu8\ZeroFuel.cs" />
     <Compile Include="Program.cs" />
