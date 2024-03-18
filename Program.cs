@@ -69,6 +69,7 @@ namespace Kata
                 Console.WriteLine("2. YouOnlyNeedOne");
                 Console.WriteLine("3. ZeroFuel");
                 Console.WriteLine("4. Pillars");
+                Console.WriteLine("4. Square(n)Sum");
 
 
                 Console.WriteLine("");
@@ -92,6 +93,9 @@ namespace Kata
                         break;
                     case 4:
                         PillarsTest();
+                        break;
+                    case 5:
+                        SquareNSumTest();
                         break;
 
                 }
@@ -415,6 +419,13 @@ namespace Kata
 
             Console.WriteLine(".");
             Console.WriteLine("Page Item Count: " + helper.PageIndex(0));
+            Console.WriteLine("---------------");
+        }
+        static void SquareNSumTest()
+        {
+            Console.WriteLine(SquareNSum.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Your result: " + SquareNSum.SquareSum(new int[] {1,2,2 }));
             Console.WriteLine("---------------");
         }
     }
