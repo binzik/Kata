@@ -113,6 +113,7 @@ namespace Kata
                 Console.WriteLine("3. The Nail");
                 Console.WriteLine("4. Linked Lists - Push&BuildOneTwoThree");
                 Console.WriteLine("5. Minectaft StonePick making");
+                Console.WriteLine("6. LeapYears");
 
 
                 Console.WriteLine("");
@@ -139,6 +140,9 @@ namespace Kata
                         break;
                     case 5:
                         StonePickAxeTest();
+                        break;
+                    case 6:
+                        LeapYearsTest();
                         break;
 
                 }
@@ -426,6 +430,13 @@ namespace Kata
             Console.WriteLine(SquareNSum.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Your result: " + SquareNSum.SquareSum(new int[] {1,2,2 }));
+            Console.WriteLine("---------------");
+        }
+        static void LeapYearsTest()
+        {
+            Console.WriteLine(LeapYears.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Your result: " + LeapYears.IsLeapYear(2000));
             Console.WriteLine("---------------");
         }
     }
