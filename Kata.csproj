@@ -57,6 +57,7 @@
     <Compile Include="kyu\kyu6\WhoLikesIt.cs" />
     <Compile Include="kyu\kyu7\BinaryAddition.cs" />
     <Compile Include="kyu\kyu7\DnaStrand.cs" />
+    <Compile Include="kyu\kyu7\LeapYears.cs" />
     <Compile Include="kyu\kyu7\Node.cs" />
     <Compile Include="kyu\kyu7\Printer.cs" />
     <Compile Include="kyu\kyu7\StonePickAxe.cs" />
