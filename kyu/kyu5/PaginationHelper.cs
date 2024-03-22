@@ -62,7 +62,7 @@ namespace Kata.kyu.kyu5
                 return _collection.Count;
             }
         }
-
+        
         /// <summary>
         /// The number of pages
         /// </summary>
