@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu7
 {
     //Course: https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/csharp
-    //Status: In progress
+    //Status: Complete
     internal class VowelCount
     {
         public static string GetTestDescription()
