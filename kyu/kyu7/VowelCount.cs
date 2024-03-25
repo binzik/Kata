@@ -12,7 +12,7 @@ namespace Kata.kyu.kyu7
     {
         public static string GetTestDescription()
         {
-            return "";
+            return "Return the number (count) of vowels in the given string.\r\n\r\nWe will consider a, e, i, o, u as vowels for this Kata (but not y).\r\n\r\nThe input string will only consist of lower case letters and/or spaces.";
         }
         public static int GetVowelCount(string str)
         {
@@ -41,6 +41,8 @@ namespace Kata.kyu.kyu7
                 }
             }
 
+            //Best Kata Code 
+            //return str.Count(i => "aeiou".Contains(i));
             return vowelCount;
         }
     }
