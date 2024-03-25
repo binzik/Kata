@@ -114,6 +114,7 @@ namespace Kata
                 Console.WriteLine("4. Linked Lists - Push&BuildOneTwoThree");
                 Console.WriteLine("5. Minectaft StonePick making");
                 Console.WriteLine("6. LeapYears");
+                Console.WriteLine("7. Vowel Count");
 
 
                 Console.WriteLine("");
@@ -143,6 +144,9 @@ namespace Kata
                         break;
                     case 6:
                         LeapYearsTest();
+                        break;
+                    case 7:
+                        VowelCountTest();
                         break;
 
                 }
@@ -437,6 +441,13 @@ namespace Kata
             Console.WriteLine(LeapYears.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Your result: " + LeapYears.IsLeapYear(2000));
+            Console.WriteLine("---------------");
+        }
+        static void VowelCountTest()
+        {
+            Console.WriteLine(VowelCount.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Your result: " + VowelCount.GetVowelCount("abracadabra"));
             Console.WriteLine("---------------");
         }
     }
