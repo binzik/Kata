@@ -12,7 +12,7 @@ namespace Kata.kyu.kyu7
     {
         public static string GetTestDescription()
         {
-            return "";
+            return "Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.\r\n\r\nExamples\r\n\"This is an example!\" ==> \"sihT si na !elpmaxe\"\r\n\"double  spaces\"      ==> \"elbuod  secaps\"";
         }
         public static string ReverseWord(string str)
         {
