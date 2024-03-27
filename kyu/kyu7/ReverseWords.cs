@@ -20,6 +20,12 @@ namespace Kata.kyu.kyu7
             //Divide into elementss
             string[] words = result.Split(' ');
 
+            //Execute loop for every element in the array of words
+
+            //Every element do reverse 
+
+            //Split to one string: result
+
             return result;
         }
     }
