@@ -115,6 +115,7 @@ namespace Kata
                 Console.WriteLine("5. Minectaft StonePick making");
                 Console.WriteLine("6. LeapYears");
                 Console.WriteLine("7. Vowel Count");
+                Console.WriteLine("8. ReverseWords");
 
 
                 Console.WriteLine("");
@@ -147,6 +148,9 @@ namespace Kata
                         break;
                     case 7:
                         VowelCountTest();
+                        break;
+                    case 8:
+                        ReverseWordsTest();
                         break;
 
                 }
@@ -448,6 +452,13 @@ namespace Kata
             Console.WriteLine(VowelCount.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Your result: " + VowelCount.GetVowelCount("abracadabra"));
+            Console.WriteLine("---------------");
+        }
+        static void ReverseWordsTest()
+        {
+            Console.WriteLine(ReverseWords.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Your result: " + ReverseWords.ReverseWord("This is an example!"));
             Console.WriteLine("---------------");
         }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu7
 {
     //Course: https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/csharp
-    //Status: In Progress
+    //Status: Complete
     internal class ReverseWords
     {
         public static string GetTestDescription()
@@ -16,7 +16,6 @@ namespace Kata.kyu.kyu7
         }
         public static string ReverseWord(string str)
         {
-            
             //Divide into elementss
             string[] words = str.Split(' ');
 
