@@ -16,17 +16,27 @@ namespace Kata.kyu.kyu7
         }
         public static string ReverseWord(string str)
         {
-            string result = str;
+            
             //Divide into elementss
-            string[] words = result.Split(' ');
+            string[] words = str.Split(' ');
 
+            string[] result = new string[words.Length];
             //Execute loop for every element in the array of words
+            int index = 0;
+            foreach (string word in words)
+            {
+                //Every element do reverse 
+                string reversedWord = "";
+                foreach(char l in word)
+                {
+                    reversedWord = l + reversedWord;
+                }
+                //Split to one string: result
+                result[index] =  reversedWord;
+                index++;
+            }
 
-            //Every element do reverse 
-
-            //Split to one string: result
-
-            return result;
+            return string.Join(" ", result);
         }
     }
 }
