@@ -477,13 +477,16 @@ namespace Kata
         }
         static void SquareEveryDigitTest()
         {
-
+            Console.WriteLine(SquareEveryDigit.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + SquareEveryDigit.SquareDigits(123));
+            Console.WriteLine("---------------");
         }
         static void FindTheDuplicatedNumberTest()
         {
             Console.WriteLine(FindTheDuplicatedNumber.GetTestDescription());
             Console.WriteLine("---------------");
-            Console.WriteLine("Seen: " + FindTheDuplicatedNumber.FindDup(new int[] { 1, 1, 2, 3 }));
+            Console.WriteLine("Result: " + FindTheDuplicatedNumber.FindDup(new int[] { 1, 1, 2, 3 }));
             Console.WriteLine("---------------");
         }
     }
