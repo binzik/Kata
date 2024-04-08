@@ -14,6 +14,7 @@ namespace Kata
         {
             ShowMenu();
         }
+        #region Menu
 
         static void ShowMenu()
         {
@@ -116,6 +117,8 @@ namespace Kata
                 Console.WriteLine("6. LeapYears");
                 Console.WriteLine("7. Vowel Count");
                 Console.WriteLine("8. ReverseWords");
+                Console.WriteLine("9. Square Every Digit");
+                Console.WriteLine("10. Find Duplicated Number");
 
 
                 Console.WriteLine("");
@@ -152,6 +155,15 @@ namespace Kata
                     case 8:
                         ReverseWordsTest();
                         break;
+                    case 9:
+                        //
+                        break;
+                    case 10:
+                        FindTheDuplicatedNumberTest();
+                        break;
+                    case 11:
+                        break;
+
 
                 }
             }
@@ -177,7 +189,7 @@ namespace Kata
                 Console.WriteLine("0. Exit");
 
                 int menuSelect = Int32.Parse(Console.ReadLine());
-                
+
                 switch (menuSelect)
                 {
                     case 0:
@@ -237,6 +249,8 @@ namespace Kata
                 }
             }
         }
+
+        #endregion
 
         //Completed
         static void BouncingBallTest()
@@ -459,6 +473,17 @@ namespace Kata
             Console.WriteLine(ReverseWords.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Your result: " + ReverseWords.ReverseWord("This is an example!"));
+            Console.WriteLine("---------------");
+        }
+        static void SquareEveryDigitTest()
+        {
+
+        }
+        static void FindTheDuplicatedNumberTest()
+        {
+            Console.WriteLine(FindTheDuplicatedNumber.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Seen: " + FindTheDuplicatedNumber.FindDup(new int[] { 1, 1, 2, 3 }));
             Console.WriteLine("---------------");
         }
     }
