@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Kata.kyu.kyu6
 {
+    //Course: 
+    //Status: Not Completed
     internal class FindTheParityOutlier
     {
         public static string GetTestDescription()
