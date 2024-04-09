@@ -51,6 +51,7 @@
     <Compile Include="kyu\kyu6\FindIt.cs" />
     <Compile Include="kyu\kyu6\FindTheParityOutlier.cs" />
     <Compile Include="kyu\kyu6\HighestScoringWord.cs" />
+    <Compile Include="kyu\kyu6\MiddleEarthGoodVsEvil.cs" />
     <Compile Include="kyu\kyu6\MorseCodeDecoder.cs" />
     <Compile Include="kyu\kyu6\SpinWords.cs" />
     <Compile Include="kyu\kyu6\SumOfDigits.cs" />

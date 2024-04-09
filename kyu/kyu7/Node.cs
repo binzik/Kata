@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu7
 {
     //From course https://www.codewars.com/kata/55be95786abade3c71000079/train/csharp
-    // Status: In Progress
+    // Status: Complete
     public class Node
     {
         public static string GetTestDescription()

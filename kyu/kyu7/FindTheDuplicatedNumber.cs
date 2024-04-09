@@ -30,12 +30,19 @@ namespace Kata.kyu.kyu7
             }
             foreach (KeyValuePair<int, int> i in keyValuePairs)
             {
-                if (i.Value>=2)
+                if (i.Value >= 2)
                 {
                     duplicateValue = i.Key;
                 }
             }
             return duplicateValue;
+
+            //int duplicateValue = int.MinValue;
+            //int previousNumber = arr[0];
+
+            //return duplicateValue;
+
+
         }
     }
 }

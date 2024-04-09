@@ -156,15 +156,13 @@ namespace Kata
                         ReverseWordsTest();
                         break;
                     case 9:
-                        //
+                        SquareEveryDigitTest();
                         break;
                     case 10:
                         FindTheDuplicatedNumberTest();
                         break;
                     case 11:
                         break;
-
-
                 }
             }
         }
@@ -183,6 +181,7 @@ namespace Kata
                 Console.WriteLine("6. Who likes it?");
                 Console.WriteLine("7. Sum of Digits/ Digital Root");
                 Console.WriteLine("8. Create your number");
+                Console.WriteLine("9. Good vs Evil");
 
 
                 Console.WriteLine("");
@@ -218,6 +217,9 @@ namespace Kata
                         break;
                     case 8:
                         CreatePhoneNumberTest();
+                        break;
+                    case 9:
+                        GoodVsEvilTest();
                         break;
                 }
             }
@@ -487,6 +489,13 @@ namespace Kata
             Console.WriteLine(FindTheDuplicatedNumber.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + FindTheDuplicatedNumber.FindDup(new int[] { 1, 1, 2, 3 }));
+            Console.WriteLine("---------------");
+        }
+        static void GoodVsEvilTest()
+        {
+            Console.WriteLine(MiddleEarthGoodVsEvil.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + MiddleEarthGoodVsEvil.GoodVsEvil("0 0 0 0 0 10", "0 1 1 1 1 0 0"));
             Console.WriteLine("---------------");
         }
     }
