@@ -495,7 +495,7 @@ namespace Kata
         {
             Console.WriteLine(MiddleEarthGoodVsEvil.GetTestDescription());
             Console.WriteLine("---------------");
-            Console.WriteLine("Result: " + MiddleEarthGoodVsEvil.GoodVsEvil("0 0 0 0 0 10", "0 1 1 1 1 0 0"));
+            Console.WriteLine("Result: " + MiddleEarthGoodVsEvil.GoodVsEvil("1 1 1 1 1 1", "1 1 1 1 1 1 1"));
             Console.WriteLine("---------------");
         }
     }

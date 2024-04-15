@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu6
 {
     //From course https://www.codewars.com/kata/52761ee4cffbc69732000738/train/csharp
-    // Status: In Progress
+    // Status: Complete
     internal class MiddleEarthGoodVsEvil
     {
         public static string GetTestDescription()
@@ -47,7 +47,7 @@ namespace Kata.kyu.kyu6
             evilPower += Int32.Parse(evilArmy[3]) * 2;
             evilPower += Int32.Parse(evilArmy[4]) * 3;
             evilPower += Int32.Parse(evilArmy[5]) * 5;
-            evilPower += Int32.Parse(evilArmy[5]) * 10;
+            evilPower += Int32.Parse(evilArmy[6]) * 10;
 
             #endregion
 
