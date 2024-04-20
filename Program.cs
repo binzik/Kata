@@ -182,6 +182,7 @@ namespace Kata
                 Console.WriteLine("7. Sum of Digits/ Digital Root");
                 Console.WriteLine("8. Create your number");
                 Console.WriteLine("9. Good vs Evil");
+                Console.WriteLine("10. Enough is enough");
 
 
                 Console.WriteLine("");
@@ -220,6 +221,9 @@ namespace Kata
                         break;
                     case 9:
                         GoodVsEvilTest();
+                        break;
+                    case 10:
+                        EnoughIsEnoungTest();
                         break;
                 }
             }
@@ -496,6 +500,14 @@ namespace Kata
             Console.WriteLine(MiddleEarthGoodVsEvil.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + MiddleEarthGoodVsEvil.GoodVsEvil("1 1 1 1 1 1", "1 1 1 1 1 1 1"));
+            Console.WriteLine("---------------");
+        }
+        static void EnoughIsEnoungTest()
+        {
+            Console.WriteLine(EnoughIsEnough.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + EnoughIsEnough.DeleteNth(new int[] {20,37,20,21}, 1));
+            Console.WriteLine("Result: " + EnoughIsEnough.DeleteNth(new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 }, 3));
             Console.WriteLine("---------------");
         }
     }

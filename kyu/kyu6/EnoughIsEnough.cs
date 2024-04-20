@@ -7,33 +7,35 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu6
 {
     //Course: https://www.codewars.com/kata/554ca54ffa7d91b236000023/train/csharp
-    //Status: In Progress
+    //Status: Complete
     internal class EnoughIsEnough
     {
+        public static string GetTestDescription()
+        {
+            return "";
+        }
         public static int[] DeleteNth(int[] arr, int x)
         {
             Dictionary<int, int> duplicatesCount = new Dictionary<int, int>();
             List<int> result = new List<int>();
 
-            //
-
-
-
-
             for (int i = 0; i<arr.Length;i++)
             {
-                if (duplicatesCount.ContainsKey(i))
+                if (duplicatesCount.ContainsKey(arr[i]))
                 {
-                    if (duplicatesCount[i] > 2)
+                    if (duplicatesCount[arr[i]] < x)
                     {
-
+                        result.Add(arr[i]);
+                        duplicatesCount[arr[i]]++;
                     }
-                    else
-
+                }
+                else
+                {
+                    duplicatesCount.Add(arr[i], 1);
+                    result.Add(arr[i]);
                 }
             }
-
-            return new int[2] { 1, 2 };
+            return result.ToArray();
         }
     }
 }
