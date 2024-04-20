@@ -88,7 +88,7 @@ namespace Kata
                         DigitizerTest();
                         break;
                     case 2:
-                        //
+                        YouOnlyNeedOneTest();
                         break;
                     case 3:
                         ZeroFuelTest();
@@ -519,6 +519,13 @@ namespace Kata
             Console.WriteLine(DnaConversion.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + DnaConversion.dnaToRna("GCAT"));
+            Console.WriteLine("---------------");
+        }
+        static void YouOnlyNeedOneTest()
+        {
+            Console.WriteLine(YouOnlyNeedOne.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + YouOnlyNeedOne.Check(new object[] {1,2,3,4,5,6,7}, 7));
             Console.WriteLine("---------------");
         }
     }
