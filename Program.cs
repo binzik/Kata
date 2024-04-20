@@ -70,7 +70,8 @@ namespace Kata
                 Console.WriteLine("2. YouOnlyNeedOne");
                 Console.WriteLine("3. ZeroFuel");
                 Console.WriteLine("4. Pillars");
-                Console.WriteLine("4. Square(n)Sum");
+                Console.WriteLine("5. Square(n)Sum");//TOCHECK
+                Console.WriteLine("6. Dna Conversion");
 
 
                 Console.WriteLine("");
@@ -97,6 +98,9 @@ namespace Kata
                         break;
                     case 5:
                         SquareNSumTest();
+                        break;
+                    case 6:
+                        DnaConversionTest();
                         break;
 
                 }
@@ -508,6 +512,13 @@ namespace Kata
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + EnoughIsEnough.DeleteNth(new int[] {20,37,20,21}, 1));
             Console.WriteLine("Result: " + EnoughIsEnough.DeleteNth(new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 }, 3));
+            Console.WriteLine("---------------");
+        }
+        static void DnaConversionTest()
+        {
+            Console.WriteLine(DnaConversion.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + DnaConversion.dnaToRna("GCAT"));
             Console.WriteLine("---------------");
         }
     }
