@@ -53,7 +53,7 @@ namespace Kata.kyu.kyu6
 
             #region Battle
 
-            return (evilPower == goodPower) ? "Battle Result: No victor on this battle field" : ((evilPower>goodPower) ? "Battle Result: Evil eradicates all trace of Good" : "Battle Result: Good triumphs over Evil") ;
+            return (evilPower == goodPower) ? "Battle Result: No victor on this battle field" : ((evilPower>goodPower) ? "Battle Result: Evil eradicates all trace of Good" : "Battle Result: Good triumphs over Evil");
 
             #endregion
         }
