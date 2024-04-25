@@ -123,6 +123,7 @@ namespace Kata
                 Console.WriteLine("8. ReverseWords");
                 Console.WriteLine("9. Square Every Digit");
                 Console.WriteLine("10. Find Duplicated Number");
+                Console.WriteLine("11. ListFiltering");
 
 
                 Console.WriteLine("");
@@ -166,6 +167,7 @@ namespace Kata
                         FindTheDuplicatedNumberTest();
                         break;
                     case 11:
+                        ListFilteringTest();
                         break;
                 }
             }
@@ -537,6 +539,13 @@ namespace Kata
             Console.WriteLine(YourOrderPlease.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + YourOrderPlease.Order("is2 Thi1s T4est 3a"));
+            Console.WriteLine("---------------");
+        }
+        static void ListFilteringTest()
+        {
+            Console.WriteLine(ListFiltering.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + ListFiltering.GetIntegersFromList(new List<object>() { 1, 2, "a", "b" }));
             Console.WriteLine("---------------");
         }
     }

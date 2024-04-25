@@ -63,6 +63,7 @@
     <Compile Include="kyu\kyu7\DnaStrand.cs" />
     <Compile Include="kyu\kyu7\FindTheDuplicatedNumber.cs" />
     <Compile Include="kyu\kyu7\LeapYears.cs" />
+    <Compile Include="kyu\kyu7\ListFiltering.cs" />
     <Compile Include="kyu\kyu7\Node.cs" />
     <Compile Include="kyu\kyu7\Printer.cs" />
     <Compile Include="kyu\kyu7\SquareEveryDigit.cs" />
