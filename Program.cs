@@ -187,6 +187,7 @@ namespace Kata
                 Console.WriteLine("8. Create your number");
                 Console.WriteLine("9. Good vs Evil");
                 Console.WriteLine("10. Enough is enough");
+                Console.WriteLine("11. Your order, please");
 
 
                 Console.WriteLine("");
@@ -228,6 +229,9 @@ namespace Kata
                         break;
                     case 10:
                         EnoughIsEnoungTest();
+                        break;
+                    case 11:
+                        YourOrderPleaseTest();
                         break;
                 }
             }
@@ -526,6 +530,13 @@ namespace Kata
             Console.WriteLine(YouOnlyNeedOne.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + YouOnlyNeedOne.Check(new object[] {1,2,3,4,5,6,7}, 7));
+            Console.WriteLine("---------------");
+        }
+        static void YourOrderPleaseTest()
+        {
+            Console.WriteLine(YourOrderPlease.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + YourOrderPlease.Order("is2 Thi1s T4est 3a"));
             Console.WriteLine("---------------");
         }
     }

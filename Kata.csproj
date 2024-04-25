@@ -58,6 +58,7 @@
     <Compile Include="kyu\kyu6\SumOfDigits.cs" />
     <Compile Include="kyu\kyu6\TitleCase.cs" />
     <Compile Include="kyu\kyu6\WhoLikesIt.cs" />
+    <Compile Include="kyu\kyu6\YourOrderPlease.cs" />
     <Compile Include="kyu\kyu7\BinaryAddition.cs" />
     <Compile Include="kyu\kyu7\DnaStrand.cs" />
     <Compile Include="kyu\kyu7\FindTheDuplicatedNumber.cs" />
