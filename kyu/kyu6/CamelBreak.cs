@@ -29,10 +29,12 @@ namespace Kata.kyu.kyu6
             //loop every letter int the string and check if there is Big letter or End of string
             for (int i = 0; i < str.Length; i++)
             {
+                //check if small letter and add to word
                 if (str[i]>96 && str[i] < 123)
                 {
                     word += str[i];
                 }
+                //if end of word or string save to the word and add to the list
                 if ((str[i] > 64 && str[i] < 91) || i==str.Length-1)
                 {
                     list.Add(word);
