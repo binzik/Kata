@@ -190,6 +190,7 @@ namespace Kata
                 Console.WriteLine("9. Good vs Evil");
                 Console.WriteLine("10. Enough is enough");
                 Console.WriteLine("11. Your order, please");
+                Console.WriteLine("12. Break Camel Case");
 
 
                 Console.WriteLine("");
@@ -234,6 +235,9 @@ namespace Kata
                         break;
                     case 11:
                         YourOrderPleaseTest();
+                        break;
+                    case 12:
+                        CamelBreakTest();
                         break;
                 }
             }
@@ -546,6 +550,13 @@ namespace Kata
             Console.WriteLine(ListFiltering.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + ListFiltering.GetIntegersFromList(new List<object>() { 1, 2, "a", "b" }));
+            Console.WriteLine("---------------");
+        }
+        static void CamelBreakTest()
+        {
+            Console.WriteLine(CamelBreak.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + CamelBreak.BreakCamelCase("camelBreak"));
             Console.WriteLine("---------------");
         }
     }
