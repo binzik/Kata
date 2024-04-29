@@ -46,6 +46,7 @@
     <Compile Include="kyu\kyu5\PaginationHelper.cs" />
     <Compile Include="kyu\kyu6\ArrayDif.cs" />
     <Compile Include="kyu\kyu6\BouncingBall.cs" />
+    <Compile Include="kyu\kyu6\CamelBreak.cs" />
     <Compile Include="kyu\kyu6\CountASpiral.cs" />
     <Compile Include="kyu\kyu6\CreatePhoneNumber.cs" />
     <Compile Include="kyu\kyu6\EnoughIsEnough.cs" />

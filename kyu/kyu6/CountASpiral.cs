@@ -7,6 +7,8 @@ using System.Numerics;
 
 namespace Kata.kyu.kyu6
 {
+    //Course:
+    //Status:
     public class CountASpiral
     {
         public static string GetTestDescription()

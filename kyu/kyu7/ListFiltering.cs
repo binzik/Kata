@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu7
 {
     //Course: https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/train/csharp
-    //Progress: Complete
+    //Status: Complete
     internal class ListFiltering
     {
         public static string GetTestDescription()
