@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu6
 {
     //Course: https://www.codewars.com/kata/5208f99aee097e6552000148/train/csharp
-    //Status: In Progress
+    //Status: Complete
     internal class CamelBreak
     {
         public static string GetTestDescription()
@@ -29,17 +29,19 @@ namespace Kata.kyu.kyu6
             //loop every letter int the string and check if there is Big letter or End of string
             for (int i = 0; i < str.Length; i++)
             {
-                //check if small letter and add to word
-                if (str[i]>96 && str[i] < 123)
+                //Add to word
+                word += str[i];
+                //If end of string add to the words list
+                if (i+1 == str.Length)
                 {
-                    word += str[i];
+                    list.Add(word);
+                    break;
                 }
-                //if end of word or string save to the word and add to the list
-                if ((str[i] > 64 && str[i] < 91) || i==str.Length-1)
+                //If next letter is upper add word to the list and clear
+                if (str[i+1]> 64 && str[i + 1] < 91)
                 {
                     list.Add(word);
                     word = string.Empty;
-                    word += str[i];
                 }
             }
 
