@@ -265,6 +265,9 @@ namespace Kata
                     case 1:
                         PaginationHelperTest();
                         break;
+                    case 2:
+                        Rot13CoderTest();
+                        break;
 
                 }
             }
@@ -557,6 +560,13 @@ namespace Kata
             Console.WriteLine(CamelBreak.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + CamelBreak.BreakCamelCase("camelBreak"));
+            Console.WriteLine("---------------");
+        }
+        static void Rot13CoderTest()
+        {
+            Console.WriteLine(Rot13Coder.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + Rot13Coder.Rot13("test"));
             Console.WriteLine("---------------");
         }
     }
