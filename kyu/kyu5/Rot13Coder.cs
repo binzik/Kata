@@ -1,15 +1,8 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Kata.kyu.kyu5
+﻿namespace Kata.kyu.kyu5
 {
     //Course: https://www.codewars.com/kata/530e15517bc88ac656000716/train/csharp
-    //Status: In Progress
-    internal class Rot13Coder
+    //Status: Complete
+    public class Rot13Coder
     {
         public static string GetTestDescription()
         {
@@ -19,25 +12,33 @@ namespace Kata.kyu.kyu5
         {
             //loop for every character in the message
             string codedMessqge = string.Empty;
-            foreach (var item in message)
+            foreach (char item in message)
             {
-                //if lower letter
-                if(item>64 && item < 91)
-                {
-
-                }
+                char letter = '#';
                 //if upper letter
-                else if(item>96 && item < 123)
+                if (item > 64 && item < 91)
                 {
+                    letter = (char)(((int)item + 13) % 256);
+                    if (letter > 90)
+                    {
+                        letter = (char)((64 + (int)letter - 90) % 256);
+                    }
+                }
+                //if lower letter
+                else if (item > 96 && item < 123)
+                {
+                    letter = (char)(((int)item + 13) % 256);
+                    if (letter > 122)
+                    {
+                        letter = (char)((96 + (int)letter - 122) % 256);
+                    }
+                }
+                else letter = item;
 
-                }
-                else
-                {
-                    codedMessqge+= item;
-                }
+                codedMessqge += letter;
 
             }
-            return "";
+            return codedMessqge;
         }
     }
 }

@@ -250,6 +250,7 @@ namespace Kata
             {
                 Console.WriteLine("*** Kyu 8 ***");
                 Console.WriteLine("1. PaginationHelper");
+                Console.WriteLine("2. Rot13 Coder");
 
 
                 Console.WriteLine("");
@@ -566,7 +567,7 @@ namespace Kata
         {
             Console.WriteLine(Rot13Coder.GetTestDescription());
             Console.WriteLine("---------------");
-            Console.WriteLine("Result: " + Rot13Coder.Rot13("test"));
+            Console.WriteLine("Result: " + Rot13Coder.Rot13("NsWvcHZibuiSol+^iOxH}grJXgsCU"));
             Console.WriteLine("---------------");
         }
     }
