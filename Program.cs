@@ -191,6 +191,7 @@ namespace Kata
                 Console.WriteLine("10. Enough is enough");
                 Console.WriteLine("11. Your order, please");
                 Console.WriteLine("12. Break Camel Case");
+                Console.WriteLine("13. ASCII Fun #1:X-Shape");
 
 
                 Console.WriteLine("");
@@ -238,6 +239,9 @@ namespace Kata
                         break;
                     case 12:
                         CamelBreakTest();
+                        break;
+                    case 13:
+                        XShapeTest();
                         break;
                 }
             }
@@ -568,6 +572,13 @@ namespace Kata
             Console.WriteLine(Rot13Coder.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + Rot13Coder.Rot13("NsWvcHZibuiSol+^iOxH}grJXgsCU"));
+            Console.WriteLine("---------------");
+        }
+        static void XShapeTest()
+        {
+            Console.WriteLine(XShape.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + XShape.X(3));
             Console.WriteLine("---------------");
         }
     }
