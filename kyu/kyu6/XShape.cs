@@ -7,24 +7,51 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu6
 {
     //From course https://www.codewars.com/kata/5906436806d25f846400009b/train/csharp
-    //Status: In Progress
+    //Status: Complete
     internal class XShape
     {
         public static string X(int n)
         {
-            string x = string.Empty;
+            //Using String Builder increases code efficiency than string
+            //Creating an object for X
+            StringBuilder x = new StringBuilder();
+            //Vertial loop for every row
             for (int i = 0; i < n; i++)
             {
+                //Horizontal loop for every character in line
                 for (int j = 0; j < n; j++)
                 {
-                    if(j==0) x += "■";
-                    if(j==n-1) x += "■";
-
-
+                    //Checking if meets the conditions for \ or / line in X
+                    if (j == i || j == (n - 1 - i))
+                        x.Append("■");
+                    //If no put empty
+                    else
+                        x.Append("□");
                 }
+                //Go to the new line if the is antoher line 
+                if (i < n - 1)
+                    x.AppendLine();
             }
+            //Return StringBuilder = x as string
+            return x.ToString();
 
-            return x;
+            //
+
+            //string x = string.Empty;
+            //int a=0, b=n-1;
+            //for (int i = 0; i < n; i++)
+            //{
+            //    for (int j = 0; j < n; j++)
+            //    {
+            //        if (j == a) x += "■";
+            //        else if (j == b) x += "■";
+            //        else x += "□";
+            //    }
+            //    a = a + 1;
+            //    b = b - 1;
+            //    if(i<n-1) x += "\n";
+            //}
+            //return x;
         }
 
         public static string GetTestDescription()

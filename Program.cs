@@ -185,7 +185,7 @@ namespace Kata
                 Console.WriteLine("4. Highest Scoring Word");
                 Console.WriteLine("5. Count a Spiral");
                 Console.WriteLine("6. Who likes it?");
-                Console.WriteLine("7. Sum of Digits/ Digital Root");
+                Console.WriteLine("7. Sum of Digits/Digital Root");
                 Console.WriteLine("8. Create your number");
                 Console.WriteLine("9. Good vs Evil");
                 Console.WriteLine("10. Enough is enough");
@@ -578,7 +578,7 @@ namespace Kata
         {
             Console.WriteLine(XShape.GetTestDescription());
             Console.WriteLine("---------------");
-            Console.WriteLine("Result: " + XShape.X(3));
+            Console.WriteLine("Result: \n" + XShape.X(5));
             Console.WriteLine("---------------");
         }
     }
