@@ -124,6 +124,7 @@ namespace Kata
                 Console.WriteLine("9. Square Every Digit");
                 Console.WriteLine("10. Find Duplicated Number");
                 Console.WriteLine("11. ListFiltering");
+                Console.WriteLine("12. Testing123");
 
 
                 Console.WriteLine("");
@@ -168,6 +169,9 @@ namespace Kata
                         break;
                     case 11:
                         ListFilteringTest();
+                        break;
+                    case 12:
+                        Testing123Test();
                         break;
                 }
             }
@@ -579,6 +583,13 @@ namespace Kata
             Console.WriteLine(XShape.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: \n" + XShape.X(5));
+            Console.WriteLine("---------------");
+        }
+        static void Testing123Test()
+        {
+            Console.WriteLine(Testing123.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + Testing123.Number(new List<string> { "a","b","c"}));
             Console.WriteLine("---------------");
         }
     }
