@@ -72,6 +72,7 @@ namespace Kata
                 Console.WriteLine("4. Pillars");
                 Console.WriteLine("5. Square(n)Sum");//TOCHECK
                 Console.WriteLine("6. Dna Conversion");
+                Console.WriteLine("7. Set Alarm");
 
 
                 Console.WriteLine("");
@@ -101,6 +102,9 @@ namespace Kata
                         break;
                     case 6:
                         DnaConversionTest();
+                        break;
+                    case 7:
+                        Set_AlarmTest();
                         break;
 
                 }
@@ -590,6 +594,13 @@ namespace Kata
             Console.WriteLine(Testing123.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + Testing123.Number(new List<string> { "a","b","c"}));
+            Console.WriteLine("---------------");
+        }
+        static void Set_AlarmTest()
+        {
+            Console.WriteLine(Set_Alarm.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + Set_Alarm.SetAlarm(true, false));
             Console.WriteLine("---------------");
         }
     }

@@ -78,6 +78,7 @@
     <Compile Include="kyu\kyu8\Digitizer.cs" />
     <Compile Include="kyu\kyu8\DnaConversion.cs" />
     <Compile Include="kyu\kyu8\Pillars.cs" />
+    <Compile Include="kyu\kyu8\Set_Alarm.cs" />
     <Compile Include="kyu\kyu8\SquareNSum.cs" />
     <Compile Include="kyu\kyu8\YouOnlyNeedOne.cs" />
     <Compile Include="kyu\kyu8\ZeroFuel.cs" />
