@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu7
 {
     //Course: https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/csharp
-    //Status: In Progress
+    //Status: Complete
     internal class Testing123
     {
         public static string GetTestDescription()
@@ -16,8 +16,17 @@ namespace Kata.kyu.kyu7
         }
         public static List<string> Number(List<string> lines)
         {
-            //your code goes here
-            return lines;
+            //If empty return empty list
+            if (lines == new List<string>()) return lines;
+            List<string> result = new List<string>();
+            int index = 1;
+            foreach (string line in lines)
+            {
+                result.Add($"{index}: {line}");
+                index++;
+            }
+            
+            return result;
         }
     }
 }
