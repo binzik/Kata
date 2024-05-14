@@ -204,6 +204,7 @@ namespace Kata
                 Console.WriteLine("11. Your order, please");
                 Console.WriteLine("12. Break Camel Case");
                 Console.WriteLine("13. ASCII Fun #1:X-Shape");
+                Console.WriteLine("14. Take a Ten Miinutes Walk");
 
 
                 Console.WriteLine("");
@@ -254,6 +255,9 @@ namespace Kata
                         break;
                     case 13:
                         XShapeTest();
+                        break;
+                    case 14:
+                        TakeATenMinutesWalkTest();
                         break;
                 }
             }
@@ -612,6 +616,13 @@ namespace Kata
             Console.WriteLine(VolumeOfaCuboid.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + VolumeOfaCuboid.GetVolumeOfCuboid(2,5,6));
+            Console.WriteLine("---------------");
+        }
+        static void TakeATenMinutesWalkTest()
+        {
+            Console.WriteLine(TakeATenMinutesWalk.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + TakeATenMinutesWalk.IsValidWalk(new string[] { "n", "s", "n", "s", "n", "s", "n", "s", "n", "s" }));
             Console.WriteLine("---------------");
         }
     }
