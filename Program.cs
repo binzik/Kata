@@ -73,6 +73,7 @@ namespace Kata
                 Console.WriteLine("5. Square(n)Sum");//TOCHECK
                 Console.WriteLine("6. Dna Conversion");
                 Console.WriteLine("7. Set Alarm");
+                Console.WriteLine("8. Volume of Cuboid");
 
 
                 Console.WriteLine("");
@@ -105,6 +106,9 @@ namespace Kata
                         break;
                     case 7:
                         Set_AlarmTest();
+                        break;
+                    case 8:
+                        VolumeOfaCuboidTest();
                         break;
 
                 }
@@ -601,6 +605,13 @@ namespace Kata
             Console.WriteLine(Set_Alarm.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + Set_Alarm.SetAlarm(true, false));
+            Console.WriteLine("---------------");
+        }
+        static void VolumeOfaCuboidTest()
+        {
+            Console.WriteLine(VolumeOfaCuboid.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + VolumeOfaCuboid.GetVolumeOfCuboid(2,5,6));
             Console.WriteLine("---------------");
         }
     }
