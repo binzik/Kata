@@ -205,6 +205,7 @@ namespace Kata
                 Console.WriteLine("12. Break Camel Case");
                 Console.WriteLine("13. ASCII Fun #1:X-Shape");
                 Console.WriteLine("14. Take a Ten Miinutes Walk");
+                Console.WriteLine("15. Count characters in your string");
 
 
                 Console.WriteLine("");
@@ -258,6 +259,9 @@ namespace Kata
                         break;
                     case 14:
                         TakeATenMinutesWalkTest();
+                        break;
+                    case 15:
+                        CountCharactersInStringTest();
                         break;
                 }
             }
@@ -623,6 +627,13 @@ namespace Kata
             Console.WriteLine(TakeATenMinutesWalk.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + TakeATenMinutesWalk.IsValidWalk(new string[] { "n", "s", "n", "s", "n", "s", "n", "s", "n", "s" }));
+            Console.WriteLine("---------------");
+        }
+        static void CountCharactersInStringTest()
+        {
+            Console.WriteLine(CountCharactersInString.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + CountCharactersInString.Count("aba"));
             Console.WriteLine("---------------");
         }
     }
