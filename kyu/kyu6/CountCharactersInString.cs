@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu6
 {
     //Course: https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/csharp
-    //Status: In Progress
+    //Status: Complete
     internal class CountCharactersInString
     {
         public static string GetTestDescription()
@@ -17,7 +17,27 @@ namespace Kata.kyu.kyu6
         public static Dictionary<char, int> Count(string str)
         {
 
-            return new Dictionary<char, int>();
+            Dictionary<char, int> letterSort = new Dictionary<char, int>();
+
+            if (String.IsNullOrEmpty(str))
+            {
+                return letterSort;
+            }
+            else
+            {
+                foreach (char c in str)
+                {
+                    if (letterSort.ContainsKey(c))
+                    {
+                        letterSort[c]++;
+                    }
+                    else
+                    {
+                        letterSort.Add(c, 1);
+                    }
+                }
+                return letterSort;
+            }
         }
     }
 }
