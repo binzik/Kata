@@ -18,24 +18,29 @@ namespace Kata.kyu.kyu6
         {
 
             Dictionary<char, int> letterSort = new Dictionary<char, int>();
-
+            //If null or empty, reutrn empty dictionary
             if (String.IsNullOrEmpty(str))
             {
                 return letterSort;
             }
+            //else go forward
             else
             {
+                //check every letter in str
                 foreach (char c in str)
                 {
+                    //If letter exist in the dictionary change value +1
                     if (letterSort.ContainsKey(c))
                     {
                         letterSort[c]++;
                     }
+                    //Else create element for letter
                     else
                     {
                         letterSort.Add(c, 1);
                     }
                 }
+                //return completed dictionary
                 return letterSort;
             }
         }
