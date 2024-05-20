@@ -77,6 +77,7 @@
     <Compile Include="kyu\kyu7\StonePickAxe.cs" />
     <Compile Include="kyu\kyu7\Testing123.cs" />
     <Compile Include="kyu\kyu7\TheNail.cs" />
+    <Compile Include="kyu\kyu7\TwoToOne.cs" />
     <Compile Include="kyu\kyu7\VowelCount.cs" />
     <Compile Include="kyu\kyu8\Digitizer.cs" />
     <Compile Include="kyu\kyu8\DnaConversion.cs" />

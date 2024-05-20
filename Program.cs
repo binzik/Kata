@@ -134,6 +134,7 @@ namespace Kata
                 Console.WriteLine("11. ListFiltering");
                 Console.WriteLine("12. Testing123");
                 Console.WriteLine("13. Friend or Foe");
+                Console.WriteLine("14. Two to One");
 
 
                 Console.WriteLine("");
@@ -184,6 +185,9 @@ namespace Kata
                         break;
                     case 13:
                         FriendOrFoeTest();
+                        break;
+                    case 14:
+                        TwoToOneTest();
                         break;
                 }
             }
@@ -646,6 +650,14 @@ namespace Kata
             Console.WriteLine(FriendOrFoe.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + FriendOrFoe.FriendOrFoeMethod(new string[] {"Ryan","Kieran", "Marik" }));
+            Console.WriteLine("---------------");
+        }
+
+        static void TwoToOneTest()
+        {
+            Console.WriteLine(TwoToOne.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + TwoToOne.Longest("aretheyhere", "yestheyarehere"));
             Console.WriteLine("---------------");
         }
     }
