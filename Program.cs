@@ -657,7 +657,7 @@ namespace Kata
         {
             Console.WriteLine(TwoToOne.GetTestDescription());
             Console.WriteLine("---------------");
-            Console.WriteLine("Result: " + TwoToOne.Longest("aretheyhere", "yestheyarehere"));
+            Console.WriteLine("Result: " + TwoToOne.Longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
             Console.WriteLine("---------------");
         }
     }
