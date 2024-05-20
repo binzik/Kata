@@ -133,6 +133,7 @@ namespace Kata
                 Console.WriteLine("10. Find Duplicated Number");
                 Console.WriteLine("11. ListFiltering");
                 Console.WriteLine("12. Testing123");
+                Console.WriteLine("13. Friend or Foe");
 
 
                 Console.WriteLine("");
@@ -180,6 +181,9 @@ namespace Kata
                         break;
                     case 12:
                         Testing123Test();
+                        break;
+                    case 13:
+                        FriendOrFoeTest();
                         break;
                 }
             }
@@ -634,6 +638,14 @@ namespace Kata
             Console.WriteLine(CountCharactersInString.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + CountCharactersInString.Count("aba"));
+            Console.WriteLine("---------------");
+        }
+
+        static void FriendOrFoeTest()
+        {
+            Console.WriteLine(FriendOrFoe.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + FriendOrFoe.FriendOrFoeMethod(new string[] {"Ryan","Kieran", "Marik" }));
             Console.WriteLine("---------------");
         }
     }
