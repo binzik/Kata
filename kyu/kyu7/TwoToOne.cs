@@ -16,17 +16,31 @@ namespace Kata.kyu.kyu7
         }
         public static string Longest(string s1, string s2)
         {
-            //distinct letters from string
-            var a = s1.Distinct();
-            //Sort them
-            a=a.OrderBy(x => x);
             //distinct letters from string and sort them 
-            var b = s2.Distinct();
-            //Sort them
-            b = b.OrderBy(x => x);
+            var a = s1.Distinct().OrderBy(x => x).ToArray();
+            //distinct letters from string and sort them 
+            var b = s2.Distinct().OrderBy(x => x).ToArray();
+
+            //Debugg
+            Console.WriteLine("A: " + string.Concat(a));
+            Console.WriteLine("B: " + string.Concat(b));
 
             //return string a or b depend which one count is higher
-            return a.Count() >= b.Count() ? string.Concat(a) : string.Concat(b);
+            return a.Count() >= b.Count() ? GetArrayToString(a) : GetArrayToString(b);
+        }
+
+        private static string GetArrayToString(char[] arrayOfLetters)
+        {
+            var sb = new StringBuilder();
+            foreach (var letter in arrayOfLetters)
+            {
+                if (letter == 'c')
+                {
+                    Console.WriteLine("This is c!!!!!!");
+                }
+                sb.Append(letter);
+            }
+            return sb.ToString();
         }
     }
 }
