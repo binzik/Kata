@@ -16,10 +16,14 @@ namespace Kata.kyu.kyu7
         }
         public static string Longest(string s1, string s2)
         {
+            //distinct letters from string
+            var a = s1.Distinct();
+            //Sort them
+            a=a.OrderBy(x => x);
             //distinct letters from string and sort them 
-            var a = s1.Distinct().OrderBy(x => x);
-            //distinct letters from string and sort them 
-            var b = s2.Distinct().OrderBy(x => x);
+            var b = s2.Distinct();
+            //Sort them
+            b = b.OrderBy(x => x);
 
             //return string a or b depend which one count is higher
             return a.Count() >= b.Count() ? string.Concat(a) : string.Concat(b);
