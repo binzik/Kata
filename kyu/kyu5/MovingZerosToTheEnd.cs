@@ -24,7 +24,18 @@ namespace Kata.kyu.kyu5
                 else listOf0.Add(arr[i]);
             }
             ints.AddRange(listOf0);
-            return ints.ToArray();
+            return ints.ToArray(); ;
+        }
+
+        //To test later
+        public static int[] MoveZeroesV2(int[] arr)
+        {
+            int index = 0;
+            foreach(int i in arr)
+            {
+
+            }
+            return new int[index];
         }
     }
 }
