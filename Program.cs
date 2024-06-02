@@ -283,6 +283,7 @@ namespace Kata
                 Console.WriteLine("*** Kyu 8 ***");
                 Console.WriteLine("1. PaginationHelper");
                 Console.WriteLine("2. Rot13 Coder");
+                Console.WriteLine("3. Moving Zeros To The End");
 
 
                 Console.WriteLine("");
@@ -300,6 +301,9 @@ namespace Kata
                         break;
                     case 2:
                         Rot13CoderTest();
+                        break;
+                    case 3:
+                        MovingZerosToTheEndTest(); 
                         break;
 
                 }
@@ -658,6 +662,14 @@ namespace Kata
             Console.WriteLine(TwoToOne.GetTestDescription());
             Console.WriteLine("---------------");
             Console.WriteLine("Result: " + TwoToOne.Longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
+            Console.WriteLine("---------------");
+        }
+        static void MovingZerosToTheEndTest()
+        {
+            //kyu5
+            Console.WriteLine(MovingZerosToTheEnd.GetTestDescription());
+            Console.WriteLine("---------------");
+            Console.WriteLine("Result: " + MovingZerosToTheEnd.MoveZeroes(new int[] {1,2,3,4,0,5,6,7,}));
             Console.WriteLine("---------------");
         }
     }
