@@ -17,9 +17,9 @@ namespace Kata.kyu.kyu7
         public static string Longest(string s1, string s2)
         {
             //distinct letters from string and sort them 
-            var a = s1.Distinct().OrderBy(x => x).ToArray();
+            var a = s1.OrderBy(x => x).Distinct().ToArray();
             //distinct letters from string and sort them 
-            var b = s2.Distinct().OrderBy(x => x).ToArray();
+            var b = s2.OrderBy(x => x).Distinct().ToArray();
 
             //Debugg
             Console.WriteLine("A: " + string.Concat(a));
@@ -31,9 +31,11 @@ namespace Kata.kyu.kyu7
 
         private static string GetArrayToString(char[] arrayOfLetters)
         {
+
             var sb = new StringBuilder();
             foreach (var letter in arrayOfLetters)
             {
+                //Check c letter because in result c disapear
                 if (letter == 'c')
                 {
                     Console.WriteLine("This is c!!!!!!");
