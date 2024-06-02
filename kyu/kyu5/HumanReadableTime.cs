@@ -7,21 +7,27 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu5
 {
     //Course: https://www.codewars.com/kata/52685f7382004e774f0001f7/train/csharp
-    //Status: In Progress
+    //Status: Complete
     public class HumanReadableTime
     {
         public static string GetReadableTime(int seconds)
         {
             int hourInSecounds, minuteInSeconds;
             //Count hours
-            hourInSecounds = (seconds-(seconds % (60 * 60)));
+            hourInSecounds = seconds-(seconds % (60 * 60));
             seconds -= hourInSecounds;
             //Count minutes
             minuteInSeconds = seconds - (seconds % 60);
             seconds-= minuteInSeconds;
-            
 
-            return $"{hourInSecounds}:{minuteInSeconds}:{seconds}";
+            string hoursInString, minutesInString, secondsInString;
+            hoursInString = ((hourInSecounds / (60 * 60)).ToString().Length == 1) ? "0" + hourInSecounds / (60 * 60) : (hourInSecounds / (60 * 60)).ToString();
+            minutesInString = ((minuteInSeconds / 60).ToString().Length == 1) ? "0" + minuteInSeconds / 60 : (minuteInSeconds / 60).ToString();
+            secondsInString = (seconds.ToString().Length == 1) ? "0" + seconds : seconds.ToString();
+
+
+
+            return $"{hoursInString}:{minutesInString}:{secondsInString}";
         }
     }
 }
