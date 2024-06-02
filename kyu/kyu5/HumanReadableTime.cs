@@ -20,14 +20,14 @@ namespace Kata.kyu.kyu5
             minuteInSeconds = seconds - (seconds % 60);
             seconds-= minuteInSeconds;
 
-            string hoursInString, minutesInString, secondsInString;
-            hoursInString = ((hourInSecounds / (60 * 60)).ToString().Length == 1) ? "0" + hourInSecounds / (60 * 60) : (hourInSecounds / (60 * 60)).ToString();
-            minutesInString = ((minuteInSeconds / 60).ToString().Length == 1) ? "0" + minuteInSeconds / 60 : (minuteInSeconds / 60).ToString();
-            secondsInString = (seconds.ToString().Length == 1) ? "0" + seconds : seconds.ToString();
+            //string hoursInString, minutesInString, secondsInString;
+            //hoursInString = ((hourInSecounds / (60 * 60)).ToString().Length == 1) ? "0" + hourInSecounds / (60 * 60) : (hourInSecounds / (60 * 60)).ToString();
+            //minutesInString = ((minuteInSeconds / 60).ToString().Length == 1) ? "0" + minuteInSeconds / 60 : (minuteInSeconds / 60).ToString();
+            //secondsInString = (seconds.ToString().Length == 1) ? "0" + seconds : seconds.ToString();
 
 
-
-            return $"{hoursInString}:{minutesInString}:{secondsInString}";
+            //return $"{hoursInString}:{minutesInString}:{secondsInString}";
+            return $"{hourInSecounds.ToString("00")}:{minuteInSeconds.ToString("00")}:{seconds.ToString("00")}";
         }
     }
 }
