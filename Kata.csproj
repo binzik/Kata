@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="kyu\kyu5\HumanReadableTime.cs" />
     <Compile Include="kyu\kyu5\MovingZerosToTheEnd.cs" />
     <Compile Include="kyu\kyu5\NumberOfTraillingZerosOfN.cs" />
     <Compile Include="kyu\kyu5\PaginationHelper.cs" />
