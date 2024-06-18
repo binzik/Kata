@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace Kata.kyu.kyu6
 {
@@ -12,14 +8,15 @@ namespace Kata.kyu.kyu6
     {
         public static int Persistence(long n)
         {
-            if(n<10) return 0;
+            if (n < 10) return 0;
             int multiplications = 0;
-            while (n>=10)
+            while (n >= 10)
             {
                 long r = 1;
-                for(int i = 0; i < n.ToString().Length; i++)
+                char[] data = n.ToString().ToArray();
+                for (int i = 0; i < n.ToString().Length; i++)
                 {
-                    r*= n.ToString().ToArray()[i]-48;
+                    r *= data[i] - 48;
                 }
 
                 n = r;
