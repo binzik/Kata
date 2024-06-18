@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Kata.kyu.kyu6
 {
     //Copurse: https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/csharp
-    //Status: In Progress
+    //Status: Complete
     public class BuildTower
     {
         public static string[] TowerBuilder(int nFloors)

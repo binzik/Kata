@@ -78,6 +78,7 @@
     <Compile Include="kyu\kyu7\LeapYears.cs" />
     <Compile Include="kyu\kyu7\ListFiltering.cs" />
     <Compile Include="kyu\kyu7\Node.cs" />
+    <Compile Include="kyu\kyu7\NthSeries.cs" />
     <Compile Include="kyu\kyu7\Printer.cs" />
     <Compile Include="kyu\kyu7\SquareEveryDigit.cs" />
     <Compile Include="kyu\kyu7\ReverseWords.cs" />
