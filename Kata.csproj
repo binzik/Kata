@@ -64,6 +64,7 @@
     <Compile Include="kyu\kyu6\MiddleEarthGoodVsEvil.cs" />
     <Compile Include="kyu\kyu6\MorseCodeDecoder.cs" />
     <Compile Include="kyu\kyu6\Persist.cs" />
+    <Compile Include="kyu\kyu6\ReplaceWithAlphabetPosition.cs" />
     <Compile Include="kyu\kyu6\SpinWords.cs" />
     <Compile Include="kyu\kyu6\SumOfDigits.cs" />
     <Compile Include="kyu\kyu6\TakeATenMinutesWalk.cs" />
