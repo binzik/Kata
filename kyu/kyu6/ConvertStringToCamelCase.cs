@@ -12,11 +12,9 @@ namespace Kata.kyu.kyu6
     {
         public static string ToCamelCase(string str)
         {
-            str = str.Replace("_", " ").Replace("-", " ");
-
             bool firstWord = true;
             List<string> list = new List<string>();
-            foreach (string word in str.Split(' '))
+            foreach (string word in str.Split('-','_',' '))
             {
                 if (!firstWord && word.Length>1) {
                     list.Add(char.ToUpper(word[0])+word.Substring(1));
