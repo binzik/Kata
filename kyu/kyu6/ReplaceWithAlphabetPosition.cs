@@ -14,7 +14,7 @@ namespace Kata.kyu.kyu6
         {
             text = text.Replace(" ","");
             List<string> list = new List<string>();
-            foreach (char c in text) { list.Add(ChangeToIndex(c)); }
+            foreach (char c in text) { if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) list.Add(ChangeToIndex(c)); }
 
             return string.Join(" ",list);
         }
