@@ -85,6 +85,7 @@
     <Compile Include="kyu\kyu7\SquareEveryDigit.cs" />
     <Compile Include="kyu\kyu7\ReverseWords.cs" />
     <Compile Include="kyu\kyu7\StonePickAxe.cs" />
+    <Compile Include="kyu\kyu7\SumOfOddNumbers.cs" />
     <Compile Include="kyu\kyu7\Testing123.cs" />
     <Compile Include="kyu\kyu7\TheNail.cs" />
     <Compile Include="kyu\kyu7\TwoToOne.cs" />
