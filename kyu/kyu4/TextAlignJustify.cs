@@ -62,7 +62,26 @@ namespace Kata.kyu.kyu4
 
         public static string JustifyLine(List<string> words, int currentLineLength, int width)
         {
+            int leftSpace = width - currentLineLength;
+            //List for words and whitespaces
+            string[] whiteSpaces = new string[words.Count-1];
 
+            //Count and calculate spaces
+            int index = 0;
+            while (leftSpace > 0)
+            {
+                if(index> words.Count - 1)
+                {
+                    index = 0;
+                }
+                whiteSpaces[index] += " ";
+                leftSpace--;
+                index++;
+            }
+
+            
+
+            
             return "";
         }
     }
