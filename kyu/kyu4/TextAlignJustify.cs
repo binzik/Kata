@@ -66,6 +66,9 @@ namespace Kata.kyu.kyu4
             //List for words and whitespaces
             string[] whiteSpaces = new string[words.Count-1];
 
+            //
+            string[] wordsElementes = words.ToArray();
+
             //Count and calculate spaces
             int index = 0;
             while (leftSpace > 0)
@@ -78,11 +81,18 @@ namespace Kata.kyu.kyu4
                 leftSpace--;
                 index++;
             }
+            //Connect whitespaces to words
+            for (int i = 0; i<wordsElementes.Length; i++)
+            {
+                if (whiteSpaces.Length > i)
+                {
+                    wordsElementes[i] = wordsElementes[i] + whiteSpaces[i];
+                }
+                
+            }
 
             
-
-            
-            return "";
+            return string.Join("",wordsElementes);
         }
     }
 }
