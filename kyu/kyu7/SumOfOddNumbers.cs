@@ -18,14 +18,12 @@ namespace Kata.kyu.kyu7
             }
             long startingNumber = 1 + ((n-1) * 2);
             long endingNumber = startingNumber + (n * 2);
-            long result = startingNumber;
-
-            for(long i = 1; i < n; i++)
+            
+            for(int i = 0; i < 10; i++)
             {
-                result += startingNumber+(i*2);
-            }
 
-            return result;
+            }
+            return 0;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Kata.kyu.kyu4
             //Split to words
             List<string> list = str.Split(' ').ToList();
 
-            //Check if one word
+            //Check if one or no word
              if(list.Count == 1)
              {
                 return str + "\n"; ;
@@ -62,6 +62,11 @@ namespace Kata.kyu.kyu4
 
         public static string JustifyLine(List<string> words, int currentLineLength, int width)
         {
+            if (words.Count < 2)
+            {
+                return words[0];
+            }
+            //Count of whitespaces left
             int leftSpace = width - currentLineLength;
             //List for words and whitespaces
             string[] whiteSpaces = new string[words.Count-1];
@@ -73,7 +78,7 @@ namespace Kata.kyu.kyu4
             int index = 0;
             while (leftSpace > 0)
             {
-                if(index> words.Count - 1)
+                if(index> words.Count - 2)
                 {
                     index = 0;
                 }
