@@ -19,77 +19,67 @@ namespace Kata.kyu.kyu6
             if(w == 0 || h == 0)
                 return false;
 
-            long startPositionX = x, startPositionY = y;
+            //long startPositionX = x, startPositionY = y;
             long actualPositionX = x, actualPositionY = y;
 
-            int limit = 0;
             //isCorner || (actualPositionX==startPositionX && actualPositionY == startPositionY)
             while (true)
-            {
-                limit++;
+            { 
                 //checkif logo touch any corner
-                if((actualPositionX==0 && actualPositionY==0) || (actualPositionX==w && actualPositionY==h) || (actualPositionX==0 && actualPositionY==h) || (actualPositionX==y && actualPositionX==0))
+                if ((actualPositionX==0 && actualPositionY==0) || (actualPositionX==w && actualPositionY==h) || (actualPositionX==0 && actualPositionY==h) || (actualPositionX==y && actualPositionX==0))
                 {
-
                     return true;
                 }
                 //Move logo
                 (actualPositionX, actualPositionY, d) = Move(actualPositionX, actualPositionY, d, w, h);
-                //check if logo back to his start position
-                if (actualPositionX==startPositionX && actualPositionY == startPositionY)
-                {
-                    return false;
-                }
+                ////check if logo back to his start position
+                //if (actualPositionX==startPositionX && actualPositionY == startPositionY)
+                //{
+                //    return false;
+                //}
             }
         }
 
         public static (long, long , string) Move(long x, long y, string direction, long w, long h)
         {
-
+            
             if (w == x || x==0)
             {
-                string r = string.Empty;
-                if (direction[1] == 'E')
-                    r = direction[0] + "W";
-                else
-                    r = direction[0] + "E";
+                string r = (direction[1] == 'E') ? direction[0] + "W" : direction[0] + "E";
 
                 direction = r;
             }
             if (y == h || y == 0)
             {
-                string r = string.Empty;
-                if (direction[0] == 'N')
-                    r = "S" + direction[1];
-                else
-                    r = "N" + direction[1];
-
+                string r = (direction[0] == 'N') ? "S" + direction[1] : "N" + direction[1];
                 direction = r;
             }
-            
-            long moveDistance;
+
+
 
             switch (direction)
             {
                 case "NE":
-                    moveDistance = (w - x > h - y) ? h - y : w - x;
-                    x +=moveDistance;
-                    y+=moveDistance;
+                    long moveDistance = (w - x > h - y) ? h - y : w - x;
+                    x += moveDistance;
+                    y += moveDistance;
                     break;
                 case "SE":
                     moveDistance = (w - x > y) ? y : w - x;
-                    x+=moveDistance;
-                    y-=moveDistance;
+                    x += moveDistance;
+                    y -= moveDistance;
                     break;
                 case "SW":
-                    moveDistance = (x>y) ? y : x;
-                    x-=moveDistance;
-                    y-=moveDistance;
+                    moveDistance = (x > y) ? y : x;
+                    x -= moveDistance;
+                    y -= moveDistance;
                     break;
                 case "NW":
-                    moveDistance = (x> h - y) ? h - y : x;
-                    x-=moveDistance;
-                    y+=moveDistance;
+                    moveDistance = (x > h - y) ? h - y : x;
+                    x -= moveDistance;
+                    y += moveDistance;
+                    break;
+                default:
                     break;
             }
             return (x,y,direction);
