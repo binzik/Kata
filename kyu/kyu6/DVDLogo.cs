@@ -16,16 +16,21 @@ namespace Kata.kyu.kyu6
         //All inputs are valid
         public static bool WillHitCorner(long w, long h, long x, long y, string d)
         {
-            
+            if(w == 0 || h == 0)
+                return false;
+
             long startPositionX = x, startPositionY = y;
             long actualPositionX = x, actualPositionY = y;
 
+            int limit = 0;
             //isCorner || (actualPositionX==startPositionX && actualPositionY == startPositionY)
             while (true)
             {
+                limit++;
                 //checkif logo touch any corner
                 if((actualPositionX==0 && actualPositionY==0) || (actualPositionX==w && actualPositionY==h) || (actualPositionX==0 && actualPositionY==h) || (actualPositionX==y && actualPositionX==0))
                 {
+
                     return true;
                 }
                 //Move logo
@@ -35,8 +40,6 @@ namespace Kata.kyu.kyu6
                 {
                     return false;
                 }
-
-                
             }
         }
 
@@ -63,26 +66,30 @@ namespace Kata.kyu.kyu6
 
                 direction = r;
             }
-                
-
+            
+            long moveDistance;
 
             switch (direction)
             {
                 case "NE":
-                    x++;
-                    y++;
+                    moveDistance = (w - x > h - y) ? h - y : w - x;
+                    x +=moveDistance;
+                    y+=moveDistance;
                     break;
                 case "SE":
-                    x++; 
-                    y--;
+                    moveDistance = (w - x > y) ? y : w - x;
+                    x+=moveDistance;
+                    y-=moveDistance;
                     break;
                 case "SW":
-                    x--;
-                    y--;
+                    moveDistance = (x>y) ? y : x;
+                    x-=moveDistance;
+                    y-=moveDistance;
                     break;
                 case "NW":
-                    x--;
-                    y++;
+                    moveDistance = (x> h - y) ? h - y : x;
+                    x-=moveDistance;
+                    y+=moveDistance;
                     break;
             }
             return (x,y,direction);
